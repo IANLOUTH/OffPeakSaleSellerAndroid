@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvOrderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/left_right_margin"
+        android:layout_marginTop="10dp"
+        android:lines="1"
+        android:text="gznf"
+        android:textSize="@dimen/cart_bottom_textsize" />
+
+    <TextView
+        android:id="@+id/tvOrderExpiry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvOrderId"
+        android:layout_marginLeft="@dimen/left_right_margin"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:lines="1"
+        android:text="gznf"
+        android:textSize="@dimen/cart_bottom_textsize" />
+
+    <TextView
+        android:id="@+id/tvOrderStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/left_right_margin"
+        android:layout_marginTop="5dp"
+        android:gravity="left|bottom"
+        android:lines="1"
+        android:text="gznf"
+        android:textSize="@dimen/cart_bottom_textsize" />
+
+    <TextView
+        android:id="@+id/tvOrderDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="5dp"
+        android:layout_marginLeft="@dimen/left_right_margin"
+        android:gravity="left|bottom"
+        android:lines="1"
+        android:text="gznf"
+        android:textSize="@dimen/cart_bottom_textsize" />
+
+     <TextView
+        android:id="@+id/tvOrderTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="5dp"
+        android:layout_marginLeft="@dimen/left_right_margin"
+        android:gravity="left|bottom"
+        android:lines="1"
+        android:text="gznf"
+        android:textSize="@dimen/cart_bottom_textsize" />
+     
+    <TextView
+        android:id="@+id/tvOrderInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="5dp"
+        android:layout_marginLeft="@dimen/left_right_margin"
+        android:gravity="left|bottom"
+        android:lines="1"
+        android:text="gznf"
+        android:textSize="@dimen/cart_bottom_textsize" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="7dp"
+        android:background="@color/triangle_underline_color" />
+
+</LinearLayout>
