@@ -250,22 +250,13 @@ public class SplashscreenActivity extends BaseActivity {
 						boldFontPath);
 				Helper.getSharedHelper().boldFont = boldFont;
 
-				if(spref.getBoolean("ProductTour", false)==true)
-				{
-					Intent intent = new Intent(getApplicationContext(),
-							SlidingMenuActivity.class);
-					if (pid != null) {
-						intent.putExtra("pid", pid);
-					}
-					startActivity(intent);
-				}else
-				{
-					Intent intent = new Intent(getApplicationContext(),
-							ProductTourActivity.class);
-					startActivity(intent);
-				}
-				
-				finish();
+				Intent intent = new Intent(getApplicationContext(),
+ 						ProfileActivity.class);
+ 				if (pid != null) {
+ 					intent.putExtra("pid", pid);
+ 				}
+ 				startActivity(intent);
+ 				finish();
 				Log.i("TIMMINGS", "SPLASH FINISHED");
 
 				// new Handler().postDelayed(new Runnable() {

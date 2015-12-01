@@ -67,10 +67,11 @@
                         android:layout_height="@dimen/button_height"
                         android:layout_marginTop="10dp"
                         android:background="@android:color/darker_gray"
-                        android:gravity="left"
+                        android:gravity="left|center_vertical"
                         android:hint="@string/email_address"
                         android:inputType="textEmailAddress"
-                        android:padding="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
                         android:singleLine="true" />
 
                     <EditText
@@ -79,11 +80,30 @@
                         android:layout_height="@dimen/button_height"
                         android:layout_marginTop="10dp"
                         android:background="@android:color/darker_gray"
-                        android:gravity="left"
+                        android:gravity="left|center_vertical"
                         android:hint="@string/password_star"
                         android:inputType="textPassword"
-                        android:padding="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
                         android:singleLine="true" />
+
+                    <Button
+                        android:id="@+id/sp_country"
+                        style="?android:attr/spinnerStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/background_round_corner"
+                        android:drawableRight="@drawable/ic_dropdown"
+                        android:paddingRight="5dp"
+                         android:gravity="left|center_vertical"
+                        android:ems="10"
+                        android:hint="@string/country"
+                        android:onClick="countryPressed"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
 
                     <Button
                         android:id="@+id/btnLogin"
@@ -95,14 +115,9 @@
                         android:text="Login"
                         android:textSize="16sp"
                         android:textStyle="bold" />
-
-                    <com.facebook.widget.LoginButton
-                        android:id="@+id/facebookauthButton"
-                        android:layout_width="250dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="20dp" />
+                    <View 
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -159,25 +174,15 @@
             android:text="Forgot Password"
             android:textSize="@dimen/textsize" />
 
-        <TextView
-            android:id="@+id/tvShowLogin"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:text="Back to login"
-            android:textSize="@dimen/textsize"
-            android:visibility="gone" />
 
         <TextView
-            android:id="@+id/tvRegister"
+            android:id="@+id/tvHelp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_weight="1"
             android:gravity="right"
-            android:text="Sign Up"
+            android:text="Need help?"
             android:textSize="@dimen/textsize" />
     </LinearLayout>
 

@@ -148,5 +148,17 @@
         android:layout_toRightOf="@+id/imageViewOverflow"
         android:background="@drawable/share"
         android:visibility="gone" />
-
+ <TextView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="Close"
+        android:textSize="18sp"
+        />
 </RelativeLayout>
