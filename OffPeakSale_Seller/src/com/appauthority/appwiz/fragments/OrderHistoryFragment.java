@@ -46,7 +46,7 @@ import com.appsauthority.appwiz.models.OrderObject;
 import com.appsauthority.appwiz.models.Retailer;
 import com.appsauthority.appwiz.utils.Constants;
 import com.appsauthority.appwiz.utils.Helper;
-import com.offpeaksale.consumer.R;
+import com.offpeaksale.seller.R;
 
 public class OrderHistoryFragment extends Fragment implements
 		OrderHistoryCaller {

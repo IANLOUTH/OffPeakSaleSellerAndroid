@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.appsauthority.appwiz.models.NavDrawerItem;
 import com.appsauthority.appwiz.utils.Helper;
-import com.offpeaksale.consumer.R;
+import com.offpeaksale.seller.R;
 
 public class NavDrawerListAdapter extends BaseAdapter {
 	

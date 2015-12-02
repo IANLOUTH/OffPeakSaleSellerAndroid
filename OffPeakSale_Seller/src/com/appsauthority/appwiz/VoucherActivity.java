@@ -33,7 +33,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.gson.Gson;
-import com.offpeaksale.consumer.R;
+import com.offpeaksale.seller.R;
 
 public class VoucherActivity extends BaseActivity implements
 		VoucherDeleteCaller {

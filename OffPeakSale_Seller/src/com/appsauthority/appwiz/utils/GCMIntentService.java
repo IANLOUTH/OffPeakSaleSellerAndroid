@@ -27,7 +27,7 @@ import com.appsauthority.appwiz.models.Voucher;
 import com.appsauthority.appwiz.models.VoucherList;
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.gson.Gson;
-import com.offpeaksale.consumer.R;
+import com.offpeaksale.seller.R;
 
 public class GCMIntentService extends IntentService {
 

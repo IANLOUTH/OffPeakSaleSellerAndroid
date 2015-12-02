@@ -14,7 +14,7 @@ import android.widget.RelativeLayout;
 
 import com.appsauthority.appwiz.models.Retailer;
 import com.appsauthority.appwiz.utils.Helper;
-import com.offpeaksale.consumer.R;
+import com.offpeaksale.seller.R;
 
 public class WebFragment extends Fragment {
 	public String url;

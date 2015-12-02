@@ -45,7 +45,7 @@ import com.google.android.youtube.player.YouTubePlayer.OnInitializedListener;
 import com.google.android.youtube.player.YouTubePlayer.Provider;
 import com.google.android.youtube.player.YouTubePlayerSupportFragment;
 import com.google.android.youtube.player.YouTubePlayerView;
-import com.offpeaksale.consumer.R;
+import com.offpeaksale.seller.R;
 
 public class MediaView extends LinearLayout implements OnInitializedListener {
 

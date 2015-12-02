@@ -10,7 +10,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.appsauthority.appwiz.utils.Helper;
-import com.offpeaksale.consumer.R;
+import com.offpeaksale.seller.R;
 
 public class ViewHolderEShop {
 

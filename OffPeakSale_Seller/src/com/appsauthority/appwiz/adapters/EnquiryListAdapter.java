@@ -21,7 +21,7 @@ import com.appsauthority.appwiz.models.ViewHolderEShop;
 import com.appsauthority.appwiz.utils.Helper;
 import com.appsauthority.appwiz.utils.ImageCacheLoader;
 import com.appsauthority.appwiz.utils.UpdateUiFromAdapterListener;
-import com.offpeaksale.consumer.R;
+import com.offpeaksale.seller.R;
 
 public class EnquiryListAdapter extends ArrayAdapter<Product> {
 

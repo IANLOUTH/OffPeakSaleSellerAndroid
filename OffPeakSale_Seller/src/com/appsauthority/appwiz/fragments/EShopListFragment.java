@@ -78,7 +78,7 @@ import com.appsauthority.appwiz.utils.Helper;
 import com.appsauthority.appwiz.utils.Utils;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import com.offpeaksale.consumer.R;
+import com.offpeaksale.seller.R;
 
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;

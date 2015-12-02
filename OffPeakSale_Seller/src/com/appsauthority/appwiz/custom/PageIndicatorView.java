@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.offpeaksale.consumer.R;
+import com.offpeaksale.seller.R;
 
 public class PageIndicatorView extends LinearLayout {
 	int count;

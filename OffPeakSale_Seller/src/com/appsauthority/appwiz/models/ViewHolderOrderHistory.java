@@ -3,7 +3,7 @@ package com.appsauthority.appwiz.models;
 import android.view.View;
 import android.widget.TextView;
 
-import com.offpeaksale.consumer.R;
+import com.offpeaksale.seller.R;
 
 public class ViewHolderOrderHistory {
 

@@ -5,7 +5,7 @@ import com.appsauthority.appwiz.models.TourObject;
 import com.appsauthority.appwiz.utils.Constants;
 import com.appsauthority.appwiz.utils.Helper;
 import com.appsauthority.appwiz.utils.ImageCacheLoader;
-import com.offpeaksale.consumer.R;
+import com.offpeaksale.seller.R;
 
 import android.content.Context;
 import android.content.Intent;

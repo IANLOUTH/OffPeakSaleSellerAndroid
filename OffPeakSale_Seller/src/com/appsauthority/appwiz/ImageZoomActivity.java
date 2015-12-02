@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 import com.appsauthority.appwiz.custom.BaseActivity;
 import com.appsauthority.appwiz.imagezoom.GestureImageView;
-import com.offpeaksale.consumer.R;
+import com.offpeaksale.seller.R;
 
 public class ImageZoomActivity extends BaseActivity {
 	GestureImageView image;

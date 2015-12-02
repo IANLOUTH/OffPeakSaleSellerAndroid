@@ -21,7 +21,7 @@ import android.widget.TextView;
 import com.appsauthority.appwiz.models.ProductCategory;
 import com.appsauthority.appwiz.utils.Helper;
 import com.appsauthority.appwiz.utils.SQLiteHelper;
-import com.offpeaksale.consumer.R;
+import com.offpeaksale.seller.R;
 
 public class EShopFragment extends Fragment implements OnTabChangeListener {
 

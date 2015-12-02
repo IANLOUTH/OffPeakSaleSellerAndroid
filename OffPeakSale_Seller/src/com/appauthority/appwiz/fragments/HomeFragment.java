@@ -71,7 +71,7 @@ import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayer.OnInitializedListener;
 import com.google.android.youtube.player.YouTubePlayer.Provider;
 import com.google.gson.Gson;
-import com.offpeaksale.consumer.R;
+import com.offpeaksale.seller.R;
 
 public class HomeFragment extends Fragment implements OnInitializedListener {
 
