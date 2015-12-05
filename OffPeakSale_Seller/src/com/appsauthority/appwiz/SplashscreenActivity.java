@@ -251,7 +251,7 @@ public class SplashscreenActivity extends BaseActivity {
 				Helper.getSharedHelper().boldFont = boldFont;
 
 				Intent intent = new Intent(getApplicationContext(),
- 						ProfileActivity.class);
+ 						SlidingMenuActivity.class);
  				if (pid != null) {
  					intent.putExtra("pid", pid);
  				}
