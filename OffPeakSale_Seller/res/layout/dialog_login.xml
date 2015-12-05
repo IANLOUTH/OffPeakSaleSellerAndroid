@@ -25,7 +25,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/image_placeholder" />
+                    android:src="@drawable/login_top_bg" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -95,12 +95,12 @@
                         android:layout_marginTop="8dp"
                         android:background="@drawable/background_round_corner"
                         android:drawableRight="@drawable/ic_dropdown"
-                        android:paddingRight="5dp"
-                         android:gravity="left|center_vertical"
                         android:ems="10"
+                        android:gravity="left|center_vertical"
                         android:hint="@string/country"
                         android:onClick="countryPressed"
                         android:paddingLeft="10dp"
+                        android:paddingRight="5dp"
                         android:singleLine="true"
                         android:textColor="@android:color/black"
                         android:textSize="18sp" />
@@ -115,48 +115,49 @@
                         android:text="Login"
                         android:textSize="16sp"
                         android:textStyle="bold" />
-                    <View 
+
+                    <View
                         android:layout_width="fill_parent"
-                        android:layout_height="30dp"/>
+                        android:layout_height="30dp" />
                 </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llForgotPwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlLoginTop"
+                android:layout_margin="@dimen/left_right_margin"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/etEmailForgotPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/darker_gray"
+                    android:gravity="left"
+                    android:hint="@string/email_address"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:singleLine="true" />
+
+                <Button
+                    android:id="@+id/btnForgotPwd"
+                    android:layout_width="150dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Send Email"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
-    <LinearLayout
-        android:id="@+id/llForgotPwd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/rlLoginTop"
-        android:layout_margin="@dimen/left_right_margin"
-        android:layout_marginTop="20dp"
-        android:gravity="center_horizontal"
-        android:orientation="vertical" >
-
-        <EditText
-            android:id="@+id/etEmailForgotPwd"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/button_height"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/darker_gray"
-            android:gravity="left"
-            android:hint="@string/email_address"
-            android:inputType="textEmailAddress"
-            android:padding="10dp"
-            android:singleLine="true" />
-
-        <Button
-            android:id="@+id/btnForgotPwd"
-            android:layout_width="150dp"
-            android:layout_height="@dimen/button_height"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="Send Email"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -173,7 +174,6 @@
             android:gravity="left"
             android:text="Forgot Password"
             android:textSize="@dimen/textsize" />
-
 
         <TextView
             android:id="@+id/tvHelp"
