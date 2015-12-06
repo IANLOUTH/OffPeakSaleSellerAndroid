@@ -7,7 +7,6 @@ package com.appsauthority.appwiz.models;
  */
 import java.io.Serializable;
 
-import com.facebook.model.PropertyName;
 import com.google.gson.annotations.SerializedName;
 
 public class Profile implements Serializable {

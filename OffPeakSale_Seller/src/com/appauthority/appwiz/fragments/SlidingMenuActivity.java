@@ -61,6 +61,7 @@ import com.appsauthority.appwiz.adapters.EShopCategoryListAdapter;
 import com.appsauthority.appwiz.adapters.FeaturedStoreListAdapter;
 import com.appsauthority.appwiz.adapters.NavDrawerListAdapter;
 import com.appsauthority.appwiz.custom.BaseActivity;
+import com.appsauthority.appwiz.fragments.DashBoardFragment;
 import com.appsauthority.appwiz.fragments.EShopListFragment;
 import com.appsauthority.appwiz.models.CategoryObject;
 import com.appsauthority.appwiz.models.CategoryResponseObject;
@@ -747,58 +748,58 @@ public class SlidingMenuActivity extends BaseActivity implements
 			return;
 		}
 
-		Fragment fragment = null;
+		Fragment fragment = new DashBoardFragment(this);
 		switch (itemType) {
 		case HOME:
-			fragment = new HomeFragment(this);
+			//fragment = new DashBoardFragment(this);
 			break;
 		case CONTACTUS:
-			fragment = new BranchLocationFragment();
+			//fragment = new BranchLocationFragment();
 
 			break;
 		case ESHOP:
-			eshopFragment = new EShopListFragment();
-			fragment = eshopFragment;
+			//eshopFragment = new EShopListFragment();
+			//fragment = new BranchLocationFragment();
 			break;
 		case FEATUREDSTORE:
-			webFragment = new WebFragment();
-			webFragment.url = featuredStoreUrl;
-			fragment = webFragment;
+			//webFragment = new WebFragment();
+		//	webFragment.url = featuredStoreUrl;
+			//fragment = webFragment;
 			break;
 		case LAYALITY:
-			loyaltyFragment = new LoyalityFragment();
-			fragment = loyaltyFragment;
+		//	loyaltyFragment = new LoyalityFragment();
+			//fragment = loyaltyFragment;
 			break;
 		case FEEDBACK:
-			fragment = new FeedBackFragment();
+			//fragment = new FeedBackFragment();
 			break;
 		case VOUCHER:
-			fragment = new VouchersFragment();
+		//	fragment = new VouchersFragment();
 			break;
 		case PROFILE:
 			// fragment = new ProfileFragment();
-			Intent in = new Intent(SlidingMenuActivity.this,
-					ProfileActivity.class);
-			startActivity(in);
-			mDrawerLayout.closeDrawer(viewFlipper);
+		//	Intent in = new Intent(SlidingMenuActivity.this,
+		//			ProfileActivity.class);
+		//	startActivity(in);
+		//	mDrawerLayout.closeDrawer(viewFlipper);
 			return;
 		case ABOUTUS:
-			webFragment = new WebFragment();
-			webFragment.url = retailer.aboutUrl;
-			fragment = webFragment;
+		//	webFragment = new WebFragment();
+		//	webFragment.url = retailer.aboutUrl;
+			//fragment = webFragment;
 			break;
 		case TERMSNCONDITION:
-			webFragment = new WebFragment();
-			webFragment.url = Helper.getSharedHelper().termsConditions;
-			fragment = webFragment;
+		//	webFragment = new WebFragment();
+		//	webFragment.url = Helper.getSharedHelper().termsConditions;
+			//fragment = webFragment;
 			break;
 		case LOOKBOOK:
-			fragment = new LookBookFragment();
+			//fragment = new LookBookFragment();
 			break;
 		case CALENDER:
-			webFragment = new WebFragment();
-			webFragment.url = retailer.calendarUrl;
-			fragment = webFragment;
+		//	webFragment = new WebFragment();
+		//	webFragment.url = retailer.calendarUrl;
+		//	fragment = webFragment;
 			break;
 
 		default:
