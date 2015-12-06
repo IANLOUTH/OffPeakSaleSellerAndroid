@@ -19,10 +19,11 @@ public class LoginHandler {
 	String emailId;
 	String country;
 
-	public LoginHandler(String emailId,String password, 
+	public LoginHandler(String emailId,String password, String country,
 			UserLoginCaller caller) {
 		this.password = password;
 		this.emailId = emailId;
+		this.country = country;
 		this.caller = caller;
 	}
 
@@ -35,6 +36,7 @@ public class LoginHandler {
 
 		@Override
 		protected void onPreExecute() {
+			
 		}
 
 		@Override
@@ -49,6 +51,13 @@ public class LoginHandler {
 				param.put("country", country);
 				JSONObject jsonObject = HTTPHandler.defaultHandler().doPost(
 						Constants.URL_USER_LOGIN, param);
+//				String jsonString = jsonObject.toString();
+//				if (jsonString != null && !jsonString.equalsIgnoreCase("")) {
+//					spref.edit()
+//							.putString(Constants.KEY_GET_RETAILER_INFO,
+//									jsonString).commit();
+//					;
+//				}
 
 				return jsonObject;
 

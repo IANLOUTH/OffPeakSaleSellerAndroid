@@ -108,7 +108,7 @@ public class ProfileActivity extends BaseActivity implements
 	LinearLayout llLogin, llForgotPwd;
 	EditText etLoginEmailId, etLoginPWD, etEmailForgotPwd;
 
-	TextView tvLogin, tvForgotPwd, tvNeedHelp;
+	TextView tvLogin, tvForgotPwd;
 
 	Button btnForgotPwd, btnLogin;
 	private static final String TAG = "ProfileActivity";
@@ -127,7 +127,6 @@ public class ProfileActivity extends BaseActivity implements
 		etEmailForgotPwd = (EditText) llLoginForm
 				.findViewById(R.id.etEmailForgotPwd);
 
-		tvNeedHelp = (TextView) llLoginForm.findViewById(R.id.tvHelp);
 
 		btnForgotPwd = (Button) llLoginForm.findViewById(R.id.btnForgotPwd);
 		btnLogin = (Button) llLoginForm.findViewById(R.id.btnLogin);
@@ -148,17 +147,7 @@ public class ProfileActivity extends BaseActivity implements
 			}
 		});
 
-		tvNeedHelp.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				textViewHeader.setText("Settings");
-				close.setVisibility(View.VISIBLE);
-				llLoginForm.setVisibility(View.GONE);
-				llForm.setVisibility(View.VISIBLE);
-				
-			}
-		});
+		
 
 		close.setOnClickListener(new OnClickListener() {
 
@@ -187,7 +176,6 @@ public class ProfileActivity extends BaseActivity implements
 				.getGradientDrawable(retailer.getHeaderColor()));
 
 		tvLogin.setTypeface(Helper.getSharedHelper().normalFont);
-		tvNeedHelp.setTypeface(Helper.getSharedHelper().normalFont);
 		tvForgotPwd.setTypeface(Helper.getSharedHelper().normalFont);
 
 		etLoginEmailId.setTypeface(Helper.getSharedHelper().normalFont);
@@ -215,7 +203,7 @@ public class ProfileActivity extends BaseActivity implements
 				} else {
 
 					LoginHandler loginHandler = new LoginHandler(emailid,
-							password, ProfileActivity.this);
+							password,"", ProfileActivity.this);
 					loginHandler.login();
 				}
 			}

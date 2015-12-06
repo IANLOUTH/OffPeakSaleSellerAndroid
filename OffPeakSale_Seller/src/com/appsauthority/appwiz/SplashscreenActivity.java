@@ -250,13 +250,8 @@ public class SplashscreenActivity extends BaseActivity {
 						boldFontPath);
 				Helper.getSharedHelper().boldFont = boldFont;
 
-				Intent intent = new Intent(getApplicationContext(),
- 						SlidingMenuActivity.class);
- 				if (pid != null) {
- 					intent.putExtra("pid", pid);
- 				}
- 				startActivity(intent);
- 				finish();
+				proccedToNextScreen();
+				
 				Log.i("TIMMINGS", "SPLASH FINISHED");
 
 				// new Handler().postDelayed(new Runnable() {
@@ -305,13 +300,7 @@ public class SplashscreenActivity extends BaseActivity {
 								getAssets(), boldFontPath);
 						Helper.getSharedHelper().boldFont = boldFont;
 
-						Intent intent = new Intent(getApplicationContext(),
-								SlidingMenuActivity.class);
-						if (pid != null) {
-							intent.putExtra("pid", pid);
-						}
-						startActivity(intent);
-						finish();
+						proccedToNextScreen();
 					}
 				}, 5000);
 			}
@@ -324,6 +313,24 @@ public class SplashscreenActivity extends BaseActivity {
 
 		@Override
 		protected void onProgressUpdate(Void... values) {
+		}
+	}
+
+	void proccedToNextScreen(){
+		String emailId = spref.getString(Constants.KEY_EMAIL, "");
+		if (!emailId.equalsIgnoreCase("")) {
+			Intent intent = new Intent(getApplicationContext(),
+						SlidingMenuActivity.class);
+				if (pid != null) {
+					intent.putExtra("pid", pid);
+				}
+				startActivity(intent);
+				finish();
+		}else{
+			Intent intent = new Intent(getApplicationContext(),
+						LoginActivity.class);
+				startActivity(intent);
+				finish();
 		}
 	}
 
