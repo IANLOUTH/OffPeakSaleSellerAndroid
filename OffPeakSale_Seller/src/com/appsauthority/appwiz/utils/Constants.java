@@ -137,7 +137,7 @@ public class Constants {
 			+ "/getConsumerProfile.php";
 	public static String URL_LOOK_BOOK = HOST + "/getLookBook.php";
 	public static String URL_LOOK_BOOK_LIKE = HOST + "/lookbook_like.php";
-	public static String URL_USER_LOGIN = HOST + "/consumer_login.php";
+	public static String URL_USER_LOGIN = HOST + "/seller_login.php";
 	public static String URL_USER_FORGOT_PWD = HOST + "/api_forgot_password.php";
 
 	public static String URL_ORDER_HISTORY = HOST + "/getAllOrders.php";

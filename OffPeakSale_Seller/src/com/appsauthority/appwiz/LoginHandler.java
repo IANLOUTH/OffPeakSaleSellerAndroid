@@ -17,6 +17,7 @@ public class LoginHandler {
 	String password;
 	UserLoginCaller caller;
 	String emailId;
+	String country;
 
 	public LoginHandler(String emailId,String password, 
 			UserLoginCaller caller) {
@@ -45,6 +46,7 @@ public class LoginHandler {
 				param.put(Constants.PARAM_RETAILER_ID, Constants.RETAILER_ID);
 				param.put(Constants.PARAM_EMAIL, emailId);
 				param.put(Constants.PARAM_USER_PASSWORD, password);
+				param.put("country", country);
 				JSONObject jsonObject = HTTPHandler.defaultHandler().doPost(
 						Constants.URL_USER_LOGIN, param);
 
