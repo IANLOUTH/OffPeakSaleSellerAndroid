@@ -20,8 +20,8 @@ public class OrderDetailDataHandler {
 	String retailerMail;
 	String transactionId;
 
-	public OrderDetailDataHandler(OrderHistoryCaller caller,
-			Activity activity,String retailerMail,String transactionId) {
+	public OrderDetailDataHandler(OrderHistoryCaller caller, Activity activity,
+			String retailerMail, String transactionId) {
 		this.caller = caller;
 		this.retailerMail = retailerMail;
 		this.transactionId = transactionId;
@@ -37,7 +37,7 @@ public class OrderDetailDataHandler {
 
 		@Override
 		protected void onPreExecute() {
-			
+
 		}
 
 		@Override
@@ -47,7 +47,7 @@ public class OrderDetailDataHandler {
 
 			try {
 				String emailId = spref.getString(Constants.KEY_EMAIL, "");
-//				emailId = "pendyala.bhargavi@gmail.com";
+				// emailId = "pendyala.bhargavi@gmail.com";
 				param.put(Constants.PARAM_RETAILER_ID, Constants.RETAILER_ID);
 				param.put(Constants.PARAM_EMAIL, emailId);
 				param.put("retailerMail", retailerMail);
@@ -67,31 +67,26 @@ public class OrderDetailDataHandler {
 		@Override
 		protected void onPostExecute(JSONObject json) {
 			if (json != null) {
-				if (json.has("errorCode")) {
-					try {
-						String errorCode = json.getString("errorCode");
-						if (errorCode != null && errorCode.equals("1")) {
-							Gson gson = new Gson();
-							OrderDetailResponseObject res = gson
-									.fromJson(json.toString(),
-											OrderDetailResponseObject.class);
-							if (caller != null && res != null) {
-								caller.orderDetailDownloaded(res);
-							}
-						} else {
+				try {
+					String errorCode = json.getString("errorCode");
+					Gson gson = new Gson();
+					OrderDetailResponseObject res = gson.fromJson(
+							json.toString(), OrderDetailResponseObject.class);
+					if (caller != null && res != null) {
+						caller.orderDetailDownloaded(res);
+					}
 
-						}
-					} catch (JSONException e) {
-						// TODO Auto-generated catch block
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
 
-						e.printStackTrace();
-						if (caller != null ) {
-							caller.orderDetailDownloaded(null);
-						}
+					e.printStackTrace();
+					if (caller != null) {
+						caller.orderDetailDownloaded(null);
 					}
 				}
+
 			} else {
-				if (caller != null ) {
+				if (caller != null) {
 					caller.orderDetailDownloaded(null);
 				}
 			}

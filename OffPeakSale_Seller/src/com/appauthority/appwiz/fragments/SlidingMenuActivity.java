@@ -157,6 +157,7 @@ public class SlidingMenuActivity extends BaseActivity implements
 		spref = PreferenceManager.getDefaultSharedPreferences(this);
 		intializeShakeDetector();
 		retailer = Helper.getSharedHelper().reatiler;
+		retailer.setRetailerName("Seller Account");
 		if (Helper.getSharedHelper().currency_code.equalsIgnoreCase("")) {
 			Helper.getSharedHelper().currency_code = retailer.defaultCurrency;
 		}
@@ -301,7 +302,7 @@ public class SlidingMenuActivity extends BaseActivity implements
 		navDrawerItems.add(my_profile);
 */
 		NavDrawerItem tnc = new NavDrawerItem("Logout"
-		/* + retailer.getRetailerName() */, R.drawable.termsofuse, 8, false);
+		/* + retailer.getRetailerName() */, R.drawable.ic_logout, 8, false);
 		tnc.itemType = DrawerItemType.LOGOUT;
 		navDrawerItems.add(tnc);
 

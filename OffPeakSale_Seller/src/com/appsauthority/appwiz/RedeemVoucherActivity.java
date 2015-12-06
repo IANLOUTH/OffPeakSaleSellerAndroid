@@ -132,9 +132,10 @@ public class RedeemVoucherActivity extends BaseActivity implements OrderHistoryC
 			intent.putExtra("orderObj", orderDetailObj.data);
 			startActivity(intent);
 		}else{
-//			Intent intent = new Intent(context, OrderDetailActivity.class);
-//			intent.putExtra("orderObj", orderDetailObj.data);
-//			startActivity(intent);
+			Intent intent = new Intent(context, InvalidVoucherActivity.class);
+			intent.putExtra("isValide", false);
+			intent.putExtra("msg", orderDetailObj.errorMessage);
+			startActivity(intent);
 		}
 	}
 }

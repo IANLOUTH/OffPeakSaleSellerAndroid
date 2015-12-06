@@ -39,14 +39,16 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:maxLines="1"
+            android:visibility="gone"
             android:text="Voucher used on 11th Nov 2015"
             android:textSize="@dimen/header_textsize"
             android:textStyle="bold" />
     </LinearLayout>
 
     <Button
+        android:id="@+id/btnOk"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/button_height"
         android:layout_alignParentBottom="true"
         android:layout_margin="@dimen/left_right_margin"
         android:background="@drawable/button_drawable"

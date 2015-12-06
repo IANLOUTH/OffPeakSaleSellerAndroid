@@ -8,5 +8,6 @@
     <color name="triangle_underline_color">#c2c2c2</color>
     <color name="white_translucent">#c8ffffff</color>
     <color name="bg_sale_color">#E62E25</color>
+    <color name="invalid_msg_color">#EC7726</color>
 
 </resources>
