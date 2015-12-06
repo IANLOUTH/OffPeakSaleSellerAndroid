@@ -148,6 +148,7 @@ public class Constants {
 	public static String URL_ORDER_DETAIL = HOST + "/getOrderDetails.php";
 	public static String URL_VILIDATE_VOUCHER = HOST + "/validateOrder.php";
 	public static String URL_REDEEM_VOUCHER = HOST + "/redeemOrder.php";
+	public static String URL_SELLER_ACCOUNT = HOST + "/seller_dashboard.php";
 
 	// public static String getHost(){
 	// Retailer retailer = Helper.getSharedHelper().reatiler;
