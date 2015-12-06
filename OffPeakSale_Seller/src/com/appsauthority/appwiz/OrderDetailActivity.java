@@ -150,7 +150,7 @@ public class OrderDetailActivity extends BaseActivity implements
 
 	void redeemVoucher() {
 		RedeemVoucherDataHandler redeemVoucher = new RedeemVoucherDataHandler(
-				this, this, "", orderObj.orderId);
+				this, this, "", orderObj.qrCode);
 		redeemVoucher.getRedeemVoucher();
 	}
 

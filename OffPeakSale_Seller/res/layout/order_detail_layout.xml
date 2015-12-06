@@ -235,15 +235,18 @@
     <LinearLayout
         android:id="@+id/llBotton"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/button_height"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:layout_marginLeft="@dimen/left_right_margin"
         android:layout_marginRight="@dimen/left_right_margin"
-        android:layout_marginTop="5dp" >
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal" >
 
         <Button
             android:id="@+id/btnCancle"
             android:layout_width="0dp"
             android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
             android:background="@drawable/button_drawable"
             android:text="Cancel" />
 
@@ -255,6 +258,7 @@
             android:id="@+id/btnRedeem"
             android:layout_width="0dp"
             android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
             android:background="@drawable/button_drawable"
             android:text="Redeem" />
     </LinearLayout>

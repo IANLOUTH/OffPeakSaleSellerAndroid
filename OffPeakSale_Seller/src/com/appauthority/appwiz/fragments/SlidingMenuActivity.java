@@ -274,12 +274,12 @@ public class SlidingMenuActivity extends BaseActivity implements
 
 	void populateDrawerItem() {
 		navDrawerItems.clear();
-//		if (Helper.getSharedHelper().reatiler.featuredStores != null
-//				&& Helper.getSharedHelper().reatiler.featuredStores.size() > 0) {
-//			isFeaturedStore = true;
-//		} else {
-//			isFeaturedStore = false;
-//		}
+		// if (Helper.getSharedHelper().reatiler.featuredStores != null
+		// && Helper.getSharedHelper().reatiler.featuredStores.size() > 0) {
+		// isFeaturedStore = true;
+		// } else {
+		// isFeaturedStore = false;
+		// }
 
 		NavDrawerItem eshop = new NavDrawerItem("Seller Account",
 				R.drawable.home_menu, 1, false);
@@ -296,21 +296,22 @@ public class SlidingMenuActivity extends BaseActivity implements
 		history.itemType = DrawerItemType.ABOUTUS;
 		navDrawerItems.add(history);
 
-		/*NavDrawerItem my_profile = new NavDrawerItem("My Profile",
-				R.drawable.my_profile, 7, true);
-		my_profile.itemType = DrawerItemType.PROFILE;
-		navDrawerItems.add(my_profile);
-*/
+		/*
+		 * NavDrawerItem my_profile = new NavDrawerItem("My Profile",
+		 * R.drawable.my_profile, 7, true); my_profile.itemType =
+		 * DrawerItemType.PROFILE; navDrawerItems.add(my_profile);
+		 */
 		NavDrawerItem tnc = new NavDrawerItem("Logout"
 		/* + retailer.getRetailerName() */, R.drawable.ic_logout, 8, false);
 		tnc.itemType = DrawerItemType.LOGOUT;
 		navDrawerItems.add(tnc);
 
-		/*NavDrawerItem about_us = new NavDrawerItem("Contact"
-		 + retailer.getRetailerName() , R.drawable.ic_online_help, 8, false);
-		about_us.itemType = DrawerItemType.ABOUTUS;
-		navDrawerItems.add(about_us);
-*/
+		/*
+		 * NavDrawerItem about_us = new NavDrawerItem("Contact" +
+		 * retailer.getRetailerName() , R.drawable.ic_online_help, 8, false);
+		 * about_us.itemType = DrawerItemType.ABOUTUS;
+		 * navDrawerItems.add(about_us);
+		 */
 	}
 
 	@Override
@@ -572,31 +573,35 @@ public class SlidingMenuActivity extends BaseActivity implements
 				eshop_category_list.setAdapter(featuredStoreAdapter);
 				featuredStoreAdapter.notifyDataSetChanged();
 				selectedList = SelectedList.FEATUREDSTORE;
-			}else if(navItem.itemType == DrawerItemType.LOGOUT){
-//				new AlertDialog.Builder(context)
-//			    .setTitle("")
-//			    .setMessage("Are you sure you want to loogout ?")
-//			    .setPositiveButton("Logout", new DialogInterface.OnClickListener() {
-//			        public void onClick(DialogInterface dialog, int which) { 
-//			            // continue with delete
-//			        	spref.edit().remove(Constants.KEY_EMAIL).commit();
-//			        	Intent intent = new Intent(SlidingMenuActivity.this, LoginActivity.class);
-//			        	startActivity(intent);
-//			        	finish();
-//			        }
-//			     })
-//			    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-//			        public void onClick(DialogInterface dialog, int which) { 
-//			            // do nothing
-//			        }
-//			     })
-//			    .setIcon(android.R.drawable.ic_dialog_alert)
-//			     .show();
-				
-				Intent intent = new Intent(SlidingMenuActivity.this,RedeemVoucherActivity.class);
-				startActivity(intent);
-				
-			}else {
+			} else if (navItem.itemType == DrawerItemType.LOGOUT) {
+				new AlertDialog.Builder(context)
+						.setTitle("")
+						.setMessage("Are you sure you want to loogout ?")
+						.setPositiveButton("Logout",
+								new DialogInterface.OnClickListener() {
+									public void onClick(DialogInterface dialog,
+											int which) {
+										// continue with delete
+										spref.edit()
+												.remove(Constants.KEY_EMAIL)
+												.commit();
+										Intent intent = new Intent(
+												SlidingMenuActivity.this,
+												LoginActivity.class);
+										startActivity(intent);
+										finish();
+									}
+								})
+						.setNegativeButton(android.R.string.no,
+								new DialogInterface.OnClickListener() {
+									public void onClick(DialogInterface dialog,
+											int which) {
+										// do nothing
+									}
+								}).setIcon(android.R.drawable.ic_dialog_alert)
+						.show();
+
+			} else {
 
 				NavDrawerItem item = navDrawerItems.get(position);
 				displayView(item.itemType, null);
@@ -752,55 +757,55 @@ public class SlidingMenuActivity extends BaseActivity implements
 		Fragment fragment = new DashBoardFragment(this);
 		switch (itemType) {
 		case HOME:
-			//fragment = new DashBoardFragment(this);
+			// fragment = new DashBoardFragment(this);
 			break;
 		case CONTACTUS:
-			//fragment = new BranchLocationFragment();
+			// fragment = new BranchLocationFragment();
 
 			break;
 		case ESHOP:
-			//eshopFragment = new EShopListFragment();
-			//fragment = new BranchLocationFragment();
+			// eshopFragment = new EShopListFragment();
+			// fragment = new BranchLocationFragment();
 			break;
 		case FEATUREDSTORE:
-			//webFragment = new WebFragment();
-		//	webFragment.url = featuredStoreUrl;
-			//fragment = webFragment;
+			// webFragment = new WebFragment();
+			// webFragment.url = featuredStoreUrl;
+			// fragment = webFragment;
 			break;
 		case LAYALITY:
-		//	loyaltyFragment = new LoyalityFragment();
-			//fragment = loyaltyFragment;
+			// loyaltyFragment = new LoyalityFragment();
+			// fragment = loyaltyFragment;
 			break;
 		case FEEDBACK:
-			//fragment = new FeedBackFragment();
+			// fragment = new FeedBackFragment();
 			break;
 		case VOUCHER:
-		//	fragment = new VouchersFragment();
+			// fragment = new VouchersFragment();
 			break;
 		case PROFILE:
 			// fragment = new ProfileFragment();
-		//	Intent in = new Intent(SlidingMenuActivity.this,
-		//			ProfileActivity.class);
-		//	startActivity(in);
-		//	mDrawerLayout.closeDrawer(viewFlipper);
+			// Intent in = new Intent(SlidingMenuActivity.this,
+			// ProfileActivity.class);
+			// startActivity(in);
+			// mDrawerLayout.closeDrawer(viewFlipper);
 			return;
 		case ABOUTUS:
-		//	webFragment = new WebFragment();
-		//	webFragment.url = retailer.aboutUrl;
-			//fragment = webFragment;
+			// webFragment = new WebFragment();
+			// webFragment.url = retailer.aboutUrl;
+			// fragment = webFragment;
 			break;
 		case TERMSNCONDITION:
-		//	webFragment = new WebFragment();
-		//	webFragment.url = Helper.getSharedHelper().termsConditions;
-			//fragment = webFragment;
+			// webFragment = new WebFragment();
+			// webFragment.url = Helper.getSharedHelper().termsConditions;
+			// fragment = webFragment;
 			break;
 		case LOOKBOOK:
-			//fragment = new LookBookFragment();
+			// fragment = new LookBookFragment();
 			break;
 		case CALENDER:
-		//	webFragment = new WebFragment();
-		//	webFragment.url = retailer.calendarUrl;
-		//	fragment = webFragment;
+			// webFragment = new WebFragment();
+			// webFragment.url = retailer.calendarUrl;
+			// fragment = webFragment;
 			break;
 
 		default:

@@ -168,7 +168,7 @@ public class RedeemVoucherActivity extends BaseActivity implements
 			}
 			final String result = scanResult.getContents();
 			if (result != null) {
-				validateVoucher(result);
+				validateVoucher(result.toUpperCase());
 
 			}
 			break;

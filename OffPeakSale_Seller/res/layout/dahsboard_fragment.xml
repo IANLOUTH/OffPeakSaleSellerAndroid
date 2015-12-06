@@ -298,7 +298,7 @@
                                 android:background="@drawable/circle_shape"
                                 android:indeterminate="false"
                                 android:max="100"
-                                android:progress="25"
+                                android:progress="0"
                                 android:progressDrawable="@drawable/circular_progress_bar" />
 
                             <TextView

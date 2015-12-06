@@ -46,7 +46,7 @@ public class InvalidVoucherActivity extends BaseActivity {
 			voucherStatus
 					.setTextColor(Color.parseColor("#"
 							+ Helper.getSharedHelper().reatiler
-									.getRetailerTextColor()));
+									.getHeaderColor()));
 		} else {
 			voucherStatus.setTextColor(getResources().getColor(
 					R.color.invalid_msg_color));
