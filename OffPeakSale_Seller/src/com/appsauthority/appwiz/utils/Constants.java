@@ -6,7 +6,7 @@ public class Constants {
 
 	public static String RETAILER_ID = "MerchantA1";
 	public static String SENDER_ID = "610499968214";
-	
+
 	final public static int LOGIN_SUCCESS = 1001;
 
 	// --- Global Var --- //
@@ -19,8 +19,11 @@ public class Constants {
 	public static int BANNER_CHANGE_INTERVAL = 30000;
 
 	public static enum DrawerItemType {
-		NONE, HOME, CONTACTUS, ESHOP, FEATUREDSTORE, LAYALITY, FEEDBACK, VOUCHER, LOOKBOOK, CALENDER, PROFILE, TERMSNCONDITION, ABOUTUS, CURRENCY,ORDER_HISTORY,
+		NONE, HOME, CONTACTUS, ESHOP, FEATUREDSTORE,
+		LAYALITY, FEEDBACK, VOUCHER, LOOKBOOK, CALENDER,
+		PROFILE, TERMSNCONDITION, ABOUTUS, CURRENCY, ORDER_HISTORY,LOGOUT,
 	}
+	
 
 	// --- Theme --- //
 	public static int BACKDROP1 = Color.parseColor("#FFFFFF");
@@ -94,13 +97,13 @@ public class Constants {
 
 	// public static String HOST = "http://appwizlive.com";
 	// public static String HOST = "http://inceptionlive.com";
-//	public static String HOST = "http://smartcommerce.asia";
+	// public static String HOST = "http://smartcommerce.asia";
 	// public static String HOST = "http://www.digimall.asia";
 	// public static String HOST = "http://119.81.207.36";
 
 	// public static String HOST = "http://www.diyecommerce.net";
 	// public static String HOST = "http://appwiz.cloudapp.net";
-	
+
 	public static String HOST = "http://119.81.207.44";
 
 	public static String URL_GET_PRODUCTS = HOST + "/getProducts.php";
@@ -138,7 +141,8 @@ public class Constants {
 	public static String URL_LOOK_BOOK = HOST + "/getLookBook.php";
 	public static String URL_LOOK_BOOK_LIKE = HOST + "/lookbook_like.php";
 	public static String URL_USER_LOGIN = HOST + "/seller_login.php";
-	public static String URL_USER_FORGOT_PWD = HOST + "/api_forgot_password.php";
+	public static String URL_USER_FORGOT_PWD = HOST
+			+ "/api_forgot_password.php";
 
 	public static String URL_ORDER_HISTORY = HOST + "/getAllOrders.php";
 	public static String URL_ORDER_DETAIL = HOST + "/getOrderDetails.php";

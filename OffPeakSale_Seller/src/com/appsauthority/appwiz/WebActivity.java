@@ -34,7 +34,7 @@ public class WebActivity extends BaseActivity {
 		setContentView(R.layout.activity_web);
 		retailer = Helper.getSharedHelper().reatiler;
 		TextView textViewHeader = (TextView) findViewById(R.id.textViewHeader);
-		textViewHeader.setText("Terms of Use");
+		textViewHeader.setText("Help");
 		View lineBot = (View) findViewById(R.id.lineBot);
 		View lineTop = (View) findViewById(R.id.lineTop);
 		Button btn_agree = (Button) findViewById(R.id.btn_agree);

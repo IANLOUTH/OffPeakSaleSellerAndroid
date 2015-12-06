@@ -10,9 +10,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.ActionBar;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -46,6 +48,7 @@ import com.appauthority.appwiz.interfaces.AppThemeUpdateListener;
 import com.appauthority.appwiz.interfaces.ProductDetailCaller;
 import com.appauthority.appwiz.interfaces.UserProfileCaller;
 import com.appsauthority.appwiz.EShopDetailActivity;
+import com.appsauthority.appwiz.LoginActivity;
 import com.appsauthority.appwiz.ProductDetailHandler;
 import com.appsauthority.appwiz.ProfileActivity;
 import com.appsauthority.appwiz.ShoppingCartActivity;
@@ -298,7 +301,7 @@ public class SlidingMenuActivity extends BaseActivity implements
 */
 		NavDrawerItem tnc = new NavDrawerItem("Logout"
 		/* + retailer.getRetailerName() */, R.drawable.termsofuse, 8, false);
-		tnc.itemType = DrawerItemType.TERMSNCONDITION;
+		tnc.itemType = DrawerItemType.LOGOUT;
 		navDrawerItems.add(tnc);
 
 		/*NavDrawerItem about_us = new NavDrawerItem("Contact"
@@ -567,22 +570,28 @@ public class SlidingMenuActivity extends BaseActivity implements
 				eshop_category_list.setAdapter(featuredStoreAdapter);
 				featuredStoreAdapter.notifyDataSetChanged();
 				selectedList = SelectedList.FEATUREDSTORE;
-			}
-			// else if (navItem.itemType == DrawerItemType.PROFILE) {
-			// viewFlipper.showNext();
-			// populateCurrencies();
-			// eshop_category_list.setAdapter(curencyListAdapter);
-			// curencyListAdapter.notifyDataSetChanged();
-			// selectedList = SelectedList.CURRENCY;
-			// }
-			// else if (navItem.itemType == DrawerItemType.ABOUTUS) {
-			// viewFlipper.showNext();
-			// // populateCurrencies();
-			// eshop_category_list.setAdapter(aboutUsAdapter);
-			// aboutUsAdapter.notifyDataSetChanged();
-			// selectedList = SelectedList.ABOUTUS;
-			// }
-			else {
+			}else if(navItem.itemType == DrawerItemType.LOGOUT){
+				new AlertDialog.Builder(context)
+			    .setTitle("")
+			    .setMessage("Are you sure you want to loogout ?")
+			    .setPositiveButton("Logout", new DialogInterface.OnClickListener() {
+			        public void onClick(DialogInterface dialog, int which) { 
+			            // continue with delete
+			        	spref.edit().remove(Constants.KEY_EMAIL).commit();
+			        	Intent intent = new Intent(SlidingMenuActivity.this, LoginActivity.class);
+			        	startActivity(intent);
+			        	finish();
+			        }
+			     })
+			    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+			        public void onClick(DialogInterface dialog, int which) { 
+			            // do nothing
+			        }
+			     })
+			    .setIcon(android.R.drawable.ic_dialog_alert)
+			     .show();
+				
+			}else {
 
 				NavDrawerItem item = navDrawerItems.get(position);
 				displayView(item.itemType, null);

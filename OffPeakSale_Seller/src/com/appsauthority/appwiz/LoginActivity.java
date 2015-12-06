@@ -20,6 +20,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,7 +28,6 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.AdapterView.OnItemClickListener;
 
 import com.appauthority.appwiz.fragments.SlidingMenuActivity;
 import com.appauthority.appwiz.interfaces.ForgotPWDCaller;
@@ -110,7 +110,11 @@ public class LoginActivity extends BaseActivity implements UserLoginCaller,
 
 			@Override
 			public void onClick(View arg0) {
-
+				
+				Intent intent = new Intent(LoginActivity.this,
+						WebActivity.class);
+				intent.putExtra("terms_of_use_link", retailer.aboutUrl);
+				startActivity(intent);
 			}
 		});
 		tvShowLogin.setOnClickListener(new OnClickListener() {
