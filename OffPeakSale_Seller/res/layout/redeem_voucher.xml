@@ -16,8 +16,9 @@
         android:orientation="vertical" >
 
         <Button
+            android:id="@+id/btnScan"
             android:layout_width="fill_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/button_height"
             android:layout_alignParentBottom="true"
             android:layout_margin="@dimen/left_right_margin"
             android:background="@drawable/button_drawable"
@@ -25,7 +26,7 @@
             android:textColor="#ffffff" />
 
         <TextView
-            android:id="@+id/voucherStatus"
+            android:id="@+id/tvOr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -33,27 +34,41 @@
             android:gravity="center"
             android:maxLines="1"
             android:text="OR"
-            android:textSize="@dimen/header_textsize"
+            android:textColor="@android:color/black"
+            android:textSize="12sp"
             android:textStyle="normal" />
 
         <TextView
-            android:id="@+id/voucherStatusDate"
+            android:id="@+id/tvEnterVoucherCode"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="60dp"
             android:gravity="center"
             android:maxLines="1"
-            android:text="Enter Order Id"
-            android:textSize="@dimen/header_textsize"
+            android:text="Enter Voucher Code"
+            android:textColor="@color/triangle_underline_color"
+            android:textSize="12sp"
             android:textStyle="normal" />
 
         <EditText
+            android:id="@+id/etVoucherCode"
             android:layout_width="fill_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="@dimen/left_right_margin"
+            android:layout_marginRight="@dimen/left_right_margin"
+            android:background="@drawable/button_drawable"
+            android:textColor="@android:color/background_light" />
+        <Button
+            android:id="@+id/btnValidate"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/button_height"
             android:layout_alignParentBottom="true"
             android:layout_margin="@dimen/left_right_margin"
             android:background="@drawable/button_drawable"
+            android:text="Validate"
             android:textColor="#ffffff" />
     </LinearLayout>
 

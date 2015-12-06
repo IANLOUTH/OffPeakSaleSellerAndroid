@@ -51,6 +51,7 @@ import com.appsauthority.appwiz.EShopDetailActivity;
 import com.appsauthority.appwiz.LoginActivity;
 import com.appsauthority.appwiz.ProductDetailHandler;
 import com.appsauthority.appwiz.ProfileActivity;
+import com.appsauthority.appwiz.RedeemVoucherActivity;
 import com.appsauthority.appwiz.ShoppingCartActivity;
 import com.appsauthority.appwiz.UserProfileDataHandler;
 import com.appsauthority.appwiz.VoucherDisplayActivity;
@@ -147,7 +148,6 @@ public class SlidingMenuActivity extends BaseActivity implements
 
 	EShopListFragment eshopFragment;
 	LoyalityFragment loyaltyFragment;
-	OrderHistoryFragment orderHistoryFragment;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -571,25 +571,28 @@ public class SlidingMenuActivity extends BaseActivity implements
 				featuredStoreAdapter.notifyDataSetChanged();
 				selectedList = SelectedList.FEATUREDSTORE;
 			}else if(navItem.itemType == DrawerItemType.LOGOUT){
-				new AlertDialog.Builder(context)
-			    .setTitle("")
-			    .setMessage("Are you sure you want to loogout ?")
-			    .setPositiveButton("Logout", new DialogInterface.OnClickListener() {
-			        public void onClick(DialogInterface dialog, int which) { 
-			            // continue with delete
-			        	spref.edit().remove(Constants.KEY_EMAIL).commit();
-			        	Intent intent = new Intent(SlidingMenuActivity.this, LoginActivity.class);
-			        	startActivity(intent);
-			        	finish();
-			        }
-			     })
-			    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
-			        public void onClick(DialogInterface dialog, int which) { 
-			            // do nothing
-			        }
-			     })
-			    .setIcon(android.R.drawable.ic_dialog_alert)
-			     .show();
+//				new AlertDialog.Builder(context)
+//			    .setTitle("")
+//			    .setMessage("Are you sure you want to loogout ?")
+//			    .setPositiveButton("Logout", new DialogInterface.OnClickListener() {
+//			        public void onClick(DialogInterface dialog, int which) { 
+//			            // continue with delete
+//			        	spref.edit().remove(Constants.KEY_EMAIL).commit();
+//			        	Intent intent = new Intent(SlidingMenuActivity.this, LoginActivity.class);
+//			        	startActivity(intent);
+//			        	finish();
+//			        }
+//			     })
+//			    .setNegativeButton(android.R.string.no, new DialogInterface.OnClickListener() {
+//			        public void onClick(DialogInterface dialog, int which) { 
+//			            // do nothing
+//			        }
+//			     })
+//			    .setIcon(android.R.drawable.ic_dialog_alert)
+//			     .show();
+				
+				Intent intent = new Intent(SlidingMenuActivity.this,RedeemVoucherActivity.class);
+				startActivity(intent);
 				
 			}else {
 
@@ -796,10 +799,6 @@ public class SlidingMenuActivity extends BaseActivity implements
 			webFragment = new WebFragment();
 			webFragment.url = retailer.calendarUrl;
 			fragment = webFragment;
-			break;
-		case ORDER_HISTORY:
-			orderHistoryFragment = new OrderHistoryFragment();
-			fragment = orderHistoryFragment;
 			break;
 
 		default:
