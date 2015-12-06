@@ -124,7 +124,9 @@ public class RedeemVoucherActivity extends BaseActivity implements
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
-
+				InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+				imm.hideSoftInputFromWindow(etVoucherCode.getWindowToken(),
+						InputMethodManager.RESULT_UNCHANGED_SHOWN);
 				IntentIntegrator.initiateScan(RedeemVoucherActivity.this,
 						R.layout.capture, R.id.viewfinder_view,
 						R.id.preview_view, true);
