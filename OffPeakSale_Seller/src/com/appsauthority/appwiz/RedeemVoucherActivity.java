@@ -1,16 +1,22 @@
 package com.appsauthority.appwiz;
 
+import jim.h.common.android.zxinglib.integrator.IntentIntegrator;
+import jim.h.common.android.zxinglib.integrator.IntentResult;
+
+import com.appauthority.appwiz.fragments.SlidingMenuActivity;
 import com.appauthority.appwiz.interfaces.OrderHistoryCaller;
 import com.appsauthority.appwiz.custom.BaseActivity;
 import com.appsauthority.appwiz.models.OrderDetailResponseObject;
 import com.appsauthority.appwiz.utils.Helper;
 import com.offpeaksale.seller.R;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -18,7 +24,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class RedeemVoucherActivity extends BaseActivity implements OrderHistoryCaller {
+public class RedeemVoucherActivity extends BaseActivity implements
+		OrderHistoryCaller {
 
 	Button btnScan, btnValidate;
 	EditText etVoucherCode;
@@ -105,8 +112,9 @@ public class RedeemVoucherActivity extends BaseActivity implements OrderHistoryC
 				// TODO Auto-generated method stub
 				String voucherCode = etVoucherCode.getText().toString();
 				if (voucherCode.length() == 0) {
-					Toast.makeText(RedeemVoucherActivity.this, "Enter Voucher Code", Toast.LENGTH_LONG).show();
-				}else{
+					Toast.makeText(RedeemVoucherActivity.this,
+							"Enter Voucher Code", Toast.LENGTH_LONG).show();
+				} else {
 					validateVoucher(voucherCode);
 				}
 			}
@@ -117,25 +125,52 @@ public class RedeemVoucherActivity extends BaseActivity implements OrderHistoryC
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 
+				IntentIntegrator.initiateScan(RedeemVoucherActivity.this,
+						R.layout.capture, R.id.viewfinder_view,
+						R.id.preview_view, true);
 			}
 		});
 	}
-	void validateVoucher(String voucherCode){
-		OrderDetailDataHandler orderDetailHandler = new OrderDetailDataHandler(this, this, "", voucherCode);
+
+	void validateVoucher(String voucherCode) {
+		OrderDetailDataHandler orderDetailHandler = new OrderDetailDataHandler(
+				this, this, "", voucherCode);
 		orderDetailHandler.getOrderDetail();
 	}
+
 	@Override
 	public void orderDetailDownloaded(OrderDetailResponseObject orderDetailObj) {
 		// TODO Auto-generated method stub
-		if (orderDetailObj.errorCode != null && orderDetailObj.errorCode.equalsIgnoreCase("1")) {
+		if (orderDetailObj.errorCode != null
+				&& orderDetailObj.errorCode.equalsIgnoreCase("1")) {
 			Intent intent = new Intent(context, OrderDetailActivity.class);
 			intent.putExtra("orderObj", orderDetailObj.data);
 			startActivity(intent);
-		}else{
+		} else {
 			Intent intent = new Intent(context, InvalidVoucherActivity.class);
 			intent.putExtra("isValide", false);
 			intent.putExtra("msg", orderDetailObj.errorMessage);
 			startActivity(intent);
+		}
+	}
+	@Override
+	public void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		switch (requestCode) {
+		case IntentIntegrator.REQUEST_CODE:
+			IntentResult scanResult = IntentIntegrator.parseActivityResult(
+					requestCode, resultCode, data);
+			if (scanResult == null) {
+				return;
+			}
+			final String result = scanResult.getContents();
+			if (result != null) {
+				validateVoucher(result);
+
+			}
+			break;
+		default:
 		}
 	}
 }

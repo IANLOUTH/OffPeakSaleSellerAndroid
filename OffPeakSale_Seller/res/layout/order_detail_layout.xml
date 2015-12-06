@@ -63,7 +63,8 @@
 
     <com.appsauthority.appwiz.utils.ResponsiveScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="0dp"
+        android:layout_weight="1" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -230,5 +231,32 @@
 
         </LinearLayout>
     </com.appsauthority.appwiz.utils.ResponsiveScrollView>
+
+    <LinearLayout
+        android:id="@+id/llBotton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginLeft="@dimen/left_right_margin"
+        android:layout_marginRight="@dimen/left_right_margin"
+        android:layout_marginTop="5dp" >
+
+        <Button
+            android:id="@+id/btnCancle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/button_drawable"
+            android:text="Cancel" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btnRedeem"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/button_drawable"
+            android:text="Redeem" />
+    </LinearLayout>
 
 </LinearLayout>
