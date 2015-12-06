@@ -272,12 +272,12 @@ public class SlidingMenuActivity extends BaseActivity implements
 
 	void populateDrawerItem() {
 		navDrawerItems.clear();
-		if (Helper.getSharedHelper().reatiler.featuredStores != null
-				&& Helper.getSharedHelper().reatiler.featuredStores.size() > 0) {
-			isFeaturedStore = true;
-		} else {
-			isFeaturedStore = false;
-		}
+//		if (Helper.getSharedHelper().reatiler.featuredStores != null
+//				&& Helper.getSharedHelper().reatiler.featuredStores.size() > 0) {
+//			isFeaturedStore = true;
+//		} else {
+//			isFeaturedStore = false;
+//		}
 
 		NavDrawerItem eshop = new NavDrawerItem("Seller Account",
 				R.drawable.home_menu, 1, false);
@@ -286,12 +286,12 @@ public class SlidingMenuActivity extends BaseActivity implements
 
 		NavDrawerItem voucher = new NavDrawerItem("Terms Of Use",
 				R.drawable.terms_menu, 5, false);
-		voucher.itemType = DrawerItemType.VOUCHER;
+		voucher.itemType = DrawerItemType.TERMSNCONDITION;
 		navDrawerItems.add(voucher);
 
 		NavDrawerItem history = new NavDrawerItem("Contact",
 				R.drawable.contact_menu, 5, false);
-		history.itemType = DrawerItemType.ORDER_HISTORY;
+		history.itemType = DrawerItemType.ABOUTUS;
 		navDrawerItems.add(history);
 
 		/*NavDrawerItem my_profile = new NavDrawerItem("My Profile",
@@ -400,7 +400,7 @@ public class SlidingMenuActivity extends BaseActivity implements
 		});
 
 		btnSearch = (ImageView) v.findViewById(R.id.btnSearch);
-		btnSearch.setVisibility(View.VISIBLE);
+		btnSearch.setVisibility(View.GONE);
 		btnSearch.setOnClickListener(new OnClickListener() {
 
 			@Override
