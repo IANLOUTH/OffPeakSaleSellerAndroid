@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent" >
 
     <ProgressBar
         android:id="@+id/progressBarDownload"
@@ -10,235 +9,239 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:indeterminate="false"/>
+        android:indeterminate="false" />
 
-        <RelativeLayout
-            android:id="@+id/llForm"
-            android:visibility="gone"
+    <RelativeLayout
+        android:id="@+id/llForm"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone" >
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="fill_parent" >
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="43dp" >
 
-            <ScrollView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="fill_parent"
-                android:layout_marginBottom="43dp" >
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/left_right_margin"
+                android:orientation="vertical" >
 
                 <LinearLayout
+                    android:id="@+id/llAccount"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/left_right_margin"
-                    android:orientation="vertical" >
+                    android:layout_height="40dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/tvMerchantAccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:maxLines="1"
+                        android:text="Company Name"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvMerchantName1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:text="KFC"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:id="@+id/llAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/tvMerchantUserIdText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:maxLines="1"
+                        android:text="Contact"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvMerchantUserId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:text="1761657"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:id="@+id/llAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/tvMerchantText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:maxLines="1"
+                        android:text="Email"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvMerchantName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:text="kfc@gmail.com"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:id="@+id/llAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/tvMerchantLocationText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:maxLines="1"
+                        android:text="Location"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvMerchantLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:text="Singapore"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:id="@+id/llAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/tvMerchantMonthText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:maxLines="1"
+                        android:text="Month"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvMerchantMonth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:text="Nov 2015"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+               <!--  <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" /> -->
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="200dp"
+                    >
 
                     <LinearLayout
-                        android:id="@+id/llAccount"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="0dp"
-                        android:orientation="horizontal"
-                        android:weightSum="2" >
-
-                        <TextView
-                            android:id="@+id/tvMerchantAccount"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="left|center_vertical"
-                            android:layout_weight="1"
-                            android:gravity="left"
-                            android:maxLines="1"
-                            android:text="Company Name"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:id="@+id/tvMerchantName1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="right|center_vertical"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:maxLines="1"
-                            android:text="KFC"
-                            android:textColor="@android:color/darker_gray"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="fill_parent"
-                        android:layout_height="1dp"
-                        android:background="#000000" />
-
-                    <LinearLayout
-                        android:id="@+id/llAccount"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="0dp"
-                        android:orientation="horizontal"
-                        android:weightSum="2" >
-
-                        <TextView
-                            android:id="@+id/tvMerchantUserIdText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="left|center_vertical"
-                            android:layout_weight="1"
-                            android:gravity="left"
-                            android:maxLines="1"
-                            android:text="Contact"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:id="@+id/tvMerchantUserId"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="right|center_vertical"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:maxLines="1"
-                            android:text="1761657"
-                            android:textColor="@android:color/darker_gray"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="fill_parent"
-                        android:layout_height="1dp"
-                        android:background="#000000" />
-
-                    <LinearLayout
-                        android:id="@+id/llAccount"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="0dp"
-                        android:orientation="horizontal"
-                        android:weightSum="2" >
-
-                        <TextView
-                            android:id="@+id/tvMerchantText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="left|center_vertical"
-                            android:layout_weight="1"
-                            android:gravity="left"
-                            android:maxLines="1"
-                            android:text="Email"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:id="@+id/tvMerchantName"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="right|center_vertical"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:maxLines="1"
-                            android:text="kfc@gmail.com"
-                            android:textColor="@android:color/darker_gray"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="fill_parent"
-                        android:layout_height="1dp"
-                        android:background="#000000" />
-
-                    <LinearLayout
-                        android:id="@+id/llAccount"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="0dp"
-                        android:orientation="horizontal"
-                        android:weightSum="2" >
-
-                        <TextView
-                            android:id="@+id/tvMerchantLocationText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="left|center_vertical"
-                            android:layout_weight="1"
-                            android:gravity="left"
-                            android:maxLines="1"
-                            android:text="Location"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:id="@+id/tvMerchantLocation"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="right|center_vertical"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:maxLines="1"
-                            android:text="Singapore"
-                            android:textColor="@android:color/darker_gray"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="fill_parent"
-                        android:layout_height="1dp"
-                        android:background="#000000" />
-
-                    <LinearLayout
-                        android:id="@+id/llAccount"
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="0dp"
-                        android:orientation="horizontal"
-                        android:weightSum="2" >
-
-                        <TextView
-                            android:id="@+id/tvMerchantMonthText"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="left|center_vertical"
-                            android:layout_weight="1"
-                            android:gravity="left"
-                            android:maxLines="1"
-                            android:text="Month"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:id="@+id/tvMerchantMonth"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerVertical="true"
-                            android:layout_gravity="right|center_vertical"
-                            android:layout_weight="1"
-                            android:gravity="right"
-                            android:maxLines="1"
-                            android:text="Nov 2015"
-                            android:textColor="@android:color/black"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="fill_parent"
-                        android:layout_height="1dp"
-                        android:background="#000000" />
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="200dp"
-                        android:orientation="horizontal"
-                        android:weightSum="2" >
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal" >
 
                         <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:layout_weight="1"
                             android:orientation="vertical" >
 
                             <TextView
@@ -249,7 +252,7 @@
                                 android:maxLines="1"
                                 android:text="50"
                                 android:textColor="@android:color/darker_gray"
-                                android:textSize="16sp" />
+                                android:textSize="18sp" />
 
                             <TextView
                                 android:id="@+id/tvRedeemed"
@@ -259,7 +262,7 @@
                                 android:maxLines="1"
                                 android:text="Redeemed"
                                 android:textColor="@android:color/holo_purple"
-                                android:textSize="16sp" />
+                                android:textSize="12sp" />
 
                             <TextView
                                 android:id="@+id/tvSoldNumber"
@@ -271,7 +274,7 @@
                                 android:maxLines="1"
                                 android:text="200"
                                 android:textColor="@android:color/darker_gray"
-                                android:textSize="16sp" />
+                                android:textSize="18sp" />
 
                             <TextView
                                 android:id="@+id/tvSold"
@@ -282,19 +285,20 @@
                                 android:maxLines="1"
                                 android:text="Units Sold"
                                 android:textColor="@android:color/holo_purple"
-                                android:textSize="16sp" />
+                                android:textSize="12sp" />
                         </LinearLayout>
 
                         <RelativeLayout
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" >
+                            android:layout_marginLeft="50dp"
+                            android:layout_gravity="center_vertical" >
 
                             <ProgressBar
                                 android:id="@+id/progressBar"
                                 style="?android:attr/progressBarStyleHorizontal"
-                                android:layout_width="200dp"
-                                android:layout_height="200dp"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
                                 android:background="@drawable/circle_shape"
                                 android:indeterminate="false"
                                 android:max="100"
@@ -310,33 +314,34 @@
                                 android:maxLines="1"
                                 android:text="25%"
                                 android:textColor="@android:color/black"
-                                android:textSize="20sp" />
+                                android:textSize="22sp" />
                         </RelativeLayout>
                     </LinearLayout>
+                </RelativeLayout>
 
-                    <View
-                        android:layout_width="fill_parent"
-                        android:layout_height="1dp"
-                        android:background="@android:color/darker_gray" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
 
-                    <View
-                        android:id="@+id/emptyView"
-                        android:layout_width="fill_parent"
-                        android:layout_height="10dp" />
-                </LinearLayout>
-            </ScrollView>
+                <View
+                    android:id="@+id/emptyView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="10dp" />
+            </LinearLayout>
+        </ScrollView>
 
-            <Button
-                android:id="@+id/Activate"
-                android:layout_width="fill_parent"
-                android:layout_height="@dimen/button_height"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/activate_qr__bg"
-                android:text="Activate QR Code"
-                android:textColor="#ffffff" />
-        </RelativeLayout>
+        <Button
+            android:id="@+id/Activate"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/activate_qr__bg"
+            android:text="Activate QR Code"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
 
 </RelativeLayout>
