@@ -50,7 +50,9 @@
         android:layout_width="fill_parent"
         android:layout_height="@dimen/button_height"
         android:layout_alignParentBottom="true"
-        android:layout_margin="@dimen/left_right_margin"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         android:background="@drawable/button_drawable"
         android:text="Ok"
         android:textColor="#ffffff" />

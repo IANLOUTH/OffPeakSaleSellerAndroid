@@ -198,6 +198,8 @@ public class OrderDetailActivity extends BaseActivity implements
 
 			tv_eshop_ResturantName
 					.setTypeface(Helper.getSharedHelper().boldFont);
+			tv_eshop_ResturantName.setTextColor(Color.parseColor("#"
+					+ Helper.getSharedHelper().reatiler.getHeaderColor()));
 			tvOldPriceDetails.setTypeface(Helper.getSharedHelper().normalFont);
 			tvNewPriceDetails.setTypeface(Helper.getSharedHelper().normalFont);
 			tvOrderDiscount.setTypeface(Helper.getSharedHelper().normalFont);
@@ -207,18 +209,18 @@ public class OrderDetailActivity extends BaseActivity implements
 
 		String orderId = "Order " + orderObj.qrCode;
 		tvOrderId.setText(orderId);
-		String resturantName = "<b>Restaurant Name</b> "
+		String resturantName = "<b>Restaurant Name</b>&nbsp;&nbsp;"
 				+ orderObj.products.get(0).getName().trim();
 		tvOrderResturantName.setText(Html.fromHtml(resturantName));
 
 		if (orderObj.outletAddr != null) {
-			String resturantAddress = "<b>Address</b> " + orderObj.outletAddr;
+			String resturantAddress = "<b>Address</b>&nbsp;&nbsp;" + orderObj.outletAddr;
 			tvOrderResturantAddress.setText(Html.fromHtml(resturantAddress));
 		} else {
 			tvOrderResturantAddress.setVisibility(View.GONE);
 		}
 		if (orderObj.outletContact != null) {
-			String resturantTelephone = "<b>Telephone</b> "
+			String resturantTelephone = "<b>Telephone</b>&nbsp;&nbsp;"
 					+ orderObj.outletContact;
 			tvOrderTelephone.setText(Html.fromHtml(resturantTelephone));
 			Linkify.addLinks((tvOrderTelephone), Linkify.ALL);
@@ -227,7 +229,7 @@ public class OrderDetailActivity extends BaseActivity implements
 		}
 
 		if (orderObj.outletLat != null && orderObj.outletLong != null) {
-			String resturantDistance = "<b>Distance</b> "
+			String resturantDistance = "<b>Distance</b>&nbsp;&nbsp;"
 					+ Helper.getSharedHelper().getDistanceBetween(
 							Constants.TARGET_LAT, Constants.TARGET_LAT,
 							Double.parseDouble(orderObj.outletLat),
@@ -237,7 +239,7 @@ public class OrderDetailActivity extends BaseActivity implements
 			tvOrderDistance.setVisibility(View.GONE);
 		}
 
-		String status = "<b>Status </b> " + orderObj.shippingStatus;
+		String status = "<b>Status </b>&nbsp;&nbsp;" + orderObj.shippingStatus;
 		tvOrderStatus.setText(Html.fromHtml(status));
 
 		float conversionValue = 0.0f;
@@ -258,13 +260,13 @@ public class OrderDetailActivity extends BaseActivity implements
 		}
 
 		if (orderObj.shippingStatus.equals("Expired")) {
-			String expiry = "<b>Expired On   </b> " + date;
+			String expiry = "<b>Expired On   </b>&nbsp;&nbsp;" + date;
 			tvOrderExpiry.setText(Html.fromHtml(expiry));
 		} else if (orderObj.shippingStatus.equals("Redeemed")) {
-			String expiry = "<b>Redeemed On </b> " + date;
+			String expiry = "<b>Redeemed On </b>&nbsp;&nbsp;" + date;
 			tvOrderExpiry.setText(Html.fromHtml(expiry));
 		} else {
-			String expiry = "<b>Expiry  </b> " + date;
+			String expiry = "<b>Expiry  </b>&nbsp;&nbsp;" + date;
 			tvOrderExpiry.setText(Html.fromHtml(expiry));
 		}
 
