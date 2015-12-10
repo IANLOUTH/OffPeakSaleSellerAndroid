@@ -61,6 +61,7 @@ import com.appsauthority.appwiz.adapters.EShopCategoryListAdapter;
 import com.appsauthority.appwiz.adapters.FeaturedStoreListAdapter;
 import com.appsauthority.appwiz.adapters.NavDrawerListAdapter;
 import com.appsauthority.appwiz.custom.BaseActivity;
+import com.appsauthority.appwiz.fragments.ContactFragment;
 import com.appsauthority.appwiz.fragments.DashBoardFragment;
 import com.appsauthority.appwiz.fragments.EShopListFragment;
 import com.appsauthority.appwiz.models.CategoryObject;
@@ -149,7 +150,7 @@ public class SlidingMenuActivity extends BaseActivity implements
 
 	EShopListFragment eshopFragment;
 	LoyalityFragment loyaltyFragment;
-
+ContactFragment contactFragment;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -793,6 +794,8 @@ public class SlidingMenuActivity extends BaseActivity implements
 			// webFragment = new WebFragment();
 			// webFragment.url = retailer.aboutUrl;
 			// fragment = webFragment;
+			contactFragment=new ContactFragment();
+			fragment = contactFragment;
 			break;
 		case TERMSNCONDITION:
 			// webFragment = new WebFragment();

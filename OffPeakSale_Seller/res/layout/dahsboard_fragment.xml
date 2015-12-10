@@ -196,7 +196,7 @@
                     android:weightSum="2" >
 
                     <TextView
-                        android:id="@+id/tvMerchantMonthText"
+                        android:id="@+id/tvMerchantStartDateText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
@@ -204,12 +204,12 @@
                         android:layout_weight="1"
                         android:gravity="left"
                         android:maxLines="1"
-                        android:text="Month"
+                        android:text="Start Date "
                         android:textColor="@android:color/black"
                         android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/tvMerchantMonth"
+                        android:id="@+id/tvMerchantStartDate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
@@ -217,7 +217,45 @@
                         android:layout_weight="1"
                         android:gravity="right"
                         android:maxLines="1"
-                        android:text="Nov 2015"
+                        android:text="15th Nov 2015"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray" />
+                 <LinearLayout
+                    android:id="@+id/llAccountEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2" >
+
+                    <TextView
+                        android:id="@+id/tvMerchantEndDateText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:maxLines="1"
+                        android:text="End Date "
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvMerchantEndDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:maxLines="1"
+                        android:text="25th Dec 2015"
                         android:textColor="@android:color/black"
                         android:textSize="14sp" />
                 </LinearLayout>
