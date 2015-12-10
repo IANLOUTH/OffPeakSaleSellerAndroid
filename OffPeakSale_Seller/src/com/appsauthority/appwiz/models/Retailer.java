@@ -185,6 +185,11 @@ public class Retailer implements Serializable {
 	@SerializedName("tutorialSlides")
 	public ArrayList<TourObject> tutorialSlides;
 	
+	@SerializedName("contactAddr")
+	public	String contactAddr;
+	
+	@SerializedName("contactPhone")
+	public String contactPhone;
 	
 	@SerializedName("menuList")
 	public List<MenuItem> menuList;

@@ -52,8 +52,8 @@ public class DashBoardFragment extends Fragment {
 	private SharedPreferences spref;
 	TextView tvMerchantAccount, tvMerchantName1, tvMerchantUserIdText,
 			tvMerchantUserId, tvMerchantText, tvMerchantName,
-			tvMerchantLocationText, tvMerchantLocation, tvMerchantMonthText,
-			tvMerchantMonth, tvRedeemedNumber, tvRedeemed, tvSoldNumber,
+			tvMerchantLocationText, tvMerchantLocation, tvMerchantStartDateText,
+			tvMerchantStartDate, tvMerchantEndDateText,tvMerchantEndDate,tvRedeemedNumber, tvRedeemed, tvSoldNumber,
 			tvSold, tvProgressText;
 	ProgressBar progressBar;
 	ProgressBar progressBarDownload;
@@ -95,9 +95,13 @@ public class DashBoardFragment extends Fragment {
 				.findViewById(R.id.tvMerchantLocationText);
 		tvMerchantLocation = (TextView) root
 				.findViewById(R.id.tvMerchantLocation);
-		tvMerchantMonthText = (TextView) root
-				.findViewById(R.id.tvMerchantMonthText);
-		tvMerchantMonth = (TextView) root.findViewById(R.id.tvMerchantMonth);
+		tvMerchantStartDateText = (TextView) root
+				.findViewById(R.id.tvMerchantStartDateText);
+		tvMerchantStartDate = (TextView) root.findViewById(R.id.tvMerchantStartDate);
+		tvMerchantEndDateText = (TextView) root
+				.findViewById(R.id.tvMerchantEndDateText);
+		tvMerchantEndDate = (TextView) root.findViewById(R.id.tvMerchantEndDate);
+		
 		tvRedeemedNumber = (TextView) root.findViewById(R.id.tvRedeemedNumber);
 		tvRedeemed = (TextView) root.findViewById(R.id.tvRedeemed);
 		tvSoldNumber = (TextView) root.findViewById(R.id.tvSoldNumber);
@@ -119,8 +123,10 @@ public class DashBoardFragment extends Fragment {
 			tvMerchantLocationText
 					.setTypeface(Helper.getSharedHelper().boldFont);
 			tvMerchantLocation.setTypeface(Helper.getSharedHelper().normalFont);
-			tvMerchantMonthText.setTypeface(Helper.getSharedHelper().boldFont);
-			tvMerchantMonth.setTypeface(Helper.getSharedHelper().normalFont);
+			tvMerchantStartDateText.setTypeface(Helper.getSharedHelper().boldFont);
+			tvMerchantStartDate.setTypeface(Helper.getSharedHelper().normalFont);
+			tvMerchantEndDateText.setTypeface(Helper.getSharedHelper().boldFont);
+			tvMerchantEndDate.setTypeface(Helper.getSharedHelper().normalFont);
 			tvRedeemedNumber.setTypeface(Helper.getSharedHelper().boldFont);
 			tvRedeemed.setTypeface(Helper.getSharedHelper().normalFont);
 			tvSoldNumber.setTypeface(Helper.getSharedHelper().boldFont);

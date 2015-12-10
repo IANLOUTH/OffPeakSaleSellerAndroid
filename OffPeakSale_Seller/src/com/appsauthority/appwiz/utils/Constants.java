@@ -92,6 +92,10 @@ public class Constants {
 	public static String KEY_USER_CURRECY = "kUserCurrency";
 	public static String KEY_GET_LOOK_BOOK_INFO = "getLookBookInfo";
 	public static String KEY_GET_ALL_ORDERS = "getAllOrders";
+	
+	public static String PARAM_NAME = "name";
+	public static String PARAM_COMMENTS = "comments";
+	public static String PARAM_SUBJECTS = "subjects";
 
 	// --- URL --- //
 
@@ -149,6 +153,8 @@ public class Constants {
 	public static String URL_VILIDATE_VOUCHER = HOST + "/validateOrder.php";
 	public static String URL_REDEEM_VOUCHER = HOST + "/redeemOrder.php";
 	public static String URL_SELLER_ACCOUNT = HOST + "/seller_dashboard.php";
+	
+	public static String URL_RETAILER_CONTACT = HOST + "/contactMail.php";
 
 	// public static String getHost(){
 	// Retailer retailer = Helper.getSharedHelper().reatiler;
