@@ -150,7 +150,7 @@ public class LoginActivity extends BaseActivity implements UserLoginCaller,
 		tvLogin.setTextColor(Color.parseColor("#"
 				+ retailer.getRetailerTextColor()));
 
-		tvLogin.setTypeface(Helper.getSharedHelper().normalFont);
+		tvLogin.setTypeface(Helper.getSharedHelper().boldFont);
 		tvRegister.setTypeface(Helper.getSharedHelper().normalFont);
 		tvForgotPwd.setTypeface(Helper.getSharedHelper().normalFont);
 

@@ -15,7 +15,7 @@
         android:id="@+id/llForm"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:visibility="gone" >
+        android:visibility="visible" >
 
         <ScrollView
             android:layout_width="match_parent"
@@ -321,7 +321,7 @@
 
                 <View
                     android:layout_width="fill_parent"
-                    android:layout_height="1dp"
+                    android:layout_height="0dp"
                     android:background="@android:color/darker_gray" />
 
                 <View

@@ -29,22 +29,23 @@
 
                 <ImageView
                     android:id="@+id/imgLogin"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/ic_launcher" />
+                    android:src="@drawable/app_logo" />
+
                 <TextView
-                        android:id="@+id/tvLogin"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/imgLogin"
-                        android:layout_marginTop="10dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_margin="3dp"
-                        android:text="Seller Login"
-                        android:textSize="@dimen/rewards_textsize"
-                        android:textStyle="bold"
-                        android:visibility="visible" />
+                    android:id="@+id/tvLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgLogin"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="3dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Seller Login"
+                    android:textSize="@dimen/login_header_textsize"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
             </RelativeLayout>
 
             <LinearLayout
@@ -60,11 +61,11 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:orientation="vertical" >
-
-                    
 
                     <EditText
                         android:id="@+id/etLoginEmailId"
@@ -109,18 +110,17 @@
                         android:paddingLeft="@dimen/edit_text_padding"
                         android:singleLine="true"
                         android:textColor="@android:color/black"
-                        android:textColorHint="@android:color/darker_gray"
                         android:textSize="@dimen/edit_text_font_size" />
 
                     <Button
                         android:id="@+id/btnLogin"
-                        android:layout_width="230dp"
+                        android:layout_width="match_parent"
                         android:layout_height="@dimen/button_height"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
                         android:padding="10dp"
                         android:text="Login"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/button_text_size"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
@@ -135,31 +135,39 @@
                 android:gravity="center_horizontal"
                 android:orientation="vertical" >
 
-                <EditText
-                    android:id="@+id/etEmailForgotPwd"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/button_height"
-                    android:layout_marginTop="10dp"
-                    android:background="@android:color/darker_gray"
-                    android:drawableLeft="@drawable/email_black"
-                    android:gravity="left|center_vertical"
-                    android:hint="@string/email_address"
-                    android:inputType="textEmailAddress"
-                    android:padding="@dimen/edit_text_padding"
-                    android:singleLine="true"
-                    android:textSize="@dimen/edit_text_font_size" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:orientation="vertical" >
 
-                <Button
-                    android:id="@+id/btnForgotPwd"
-                    android:layout_width="230dp"
-                    android:layout_height="@dimen/button_height"
-                    android:layout_marginBottom="10dp"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center"
-                    android:padding="10dp"
-                    android:text="Send Email"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    <EditText
+                        android:id="@+id/etEmailForgotPwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginTop="10dp"
+                        android:background="@android:color/darker_gray"
+                        android:drawableLeft="@drawable/email_black"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/email_address"
+                        android:inputType="textEmailAddress"
+                        android:padding="@dimen/edit_text_padding"
+                        android:singleLine="true"
+                        android:textSize="@dimen/edit_text_font_size" />
+
+                    <Button
+                        android:id="@+id/btnForgotPwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Send Email"
+                        android:textSize="@dimen/button_text_size"
+                        android:textStyle="bold" />
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -170,36 +178,44 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="@dimen/left_right_margin" >
 
-        <TextView
-            android:id="@+id/tvForgotPwd"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:text="Forgot Password"
-            android:textSize="@dimen/textsize" />
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal" >
 
-        <TextView
-            android:id="@+id/tvShowLogin"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_weight="1"
-            android:gravity="left"
-            android:text="Back to login"
-            android:textSize="@dimen/textsize"
-            android:visibility="gone" />
+            <TextView
+                android:id="@+id/tvForgotPwd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="Forgot Password"
+                android:textSize="@dimen/button_text_size" />
 
-        <TextView
-            android:id="@+id/tvRegister"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:text="Need help"
-            android:textSize="@dimen/textsize" />
+            <TextView
+                android:id="@+id/tvShowLogin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="Back to login"
+                android:textSize="@dimen/button_text_size"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Need help"
+                android:textSize="@dimen/button_text_size" />
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>

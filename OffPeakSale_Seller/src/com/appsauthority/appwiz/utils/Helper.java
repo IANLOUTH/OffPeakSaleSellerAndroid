@@ -215,6 +215,7 @@ public class Helper {
 
 		normalFontMap.put("Times", "Times New Roman.ttf");
 		normalFontMap.put("Trebuchet", "Trebuchet MS.ttf");
+		normalFontMap.put("MYRIADPRO", "MYRIADPRO-REGULAR.OTF");
 		if (normalFontMap.containsKey(fontname)) {
 			String normaFontName = normalFontMap.get(fontname);
 
@@ -242,6 +243,7 @@ public class Helper {
 
 		normalFontMap.put("Times", "Times New Roman-Bold.ttf");
 		normalFontMap.put("Trebuchet", "Trebuchet MS-Bold.ttf");
+		normalFontMap.put("MYRIADPRO", "MYRIADPRO-SEMIBOLD.OTF");
 		if (normalFontMap.containsKey(fontname)) {
 			String normaFontName = normalFontMap.get(fontname);
 
