@@ -1,7 +1,7 @@
 <resources>
 
     <dimen name="header_height">52dp</dimen>
-    <dimen name="header_textsize">22sp</dimen>
+    
     <dimen name="footer_height">52dp</dimen>
     <dimen name="footer_textsize">11sp</dimen>
     <dimen name="footer_selected">4dp</dimen>
@@ -33,5 +33,17 @@
     <dimen name="login_header_textsize">18sp</dimen>
     <dimen name="edit_text_font_size">12sp</dimen>
     <dimen name="button_text_size">13sp</dimen>
+    <dimen name="header_textsize">18sp</dimen>
+    <dimen name="menu_item_textsize">15sp</dimen>
+    <dimen name="history_id_textsize">13sp</dimen>
+    <dimen name="history_item_textsize">13sp</dimen>
+    <dimen name="item_title_textsize">15sp</dimen>
+    <dimen name="old_price_textsize">13sp</dimen>
+    <dimen name="new_price_textsize">15sp</dimen>
+    <dimen name="unit_value_textsize">24sp</dimen>
+    <dimen name="unit_lable_textsize">13sp</dimen>
+    <dimen name="percentage_textsize">30sp</dimen>
+    <dimen name="vaoucher_msg_textsize">30sp</dimen>
+    <dimen name="vaoucher_date_textsize">30sp</dimen>
 
 </resources>
