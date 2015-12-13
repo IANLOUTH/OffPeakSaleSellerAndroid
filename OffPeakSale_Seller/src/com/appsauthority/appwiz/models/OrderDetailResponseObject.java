@@ -12,6 +12,9 @@ public class OrderDetailResponseObject implements Serializable {
 	@SerializedName("errorMessage")
 	public String errorMessage;
 	
+	@SerializedName("usedOn")
+	public String usedOn;
+	
 	@SerializedName("data")
 	public OrderObject data;
 }

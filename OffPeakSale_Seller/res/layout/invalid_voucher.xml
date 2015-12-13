@@ -38,8 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
-            android:maxLines="1"
-            android:visibility="gone"
+            android:visibility="visible"
             android:text="Voucher used on 11th Nov 2015"
             android:textSize="@dimen/header_textsize"
             android:textStyle="bold" />
