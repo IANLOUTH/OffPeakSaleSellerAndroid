@@ -40,8 +40,9 @@ public class InvalidVoucherActivity extends BaseActivity {
 		Intent intent = getIntent();
 		String msg = intent.getStringExtra("msg");
 		isValid = intent.getBooleanExtra("isValide", false);
+		String usednon=intent.getStringExtra("usednon");
 		voucherStatus.setText(msg);
-		
+		voucherStatusDate.setText(msg+" on "+usednon);
 		if (isValid) {
 			voucherStatus
 					.setTextColor(Color.parseColor("#"

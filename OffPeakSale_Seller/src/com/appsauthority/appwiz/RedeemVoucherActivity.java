@@ -152,6 +152,7 @@ public class RedeemVoucherActivity extends BaseActivity implements
 			Intent intent = new Intent(context, InvalidVoucherActivity.class);
 			intent.putExtra("isValide", false);
 			intent.putExtra("msg", orderDetailObj.errorMessage);
+			intent.putExtra("usednon", orderDetailObj.usedOn);
 			startActivity(intent);
 		}
 	}
