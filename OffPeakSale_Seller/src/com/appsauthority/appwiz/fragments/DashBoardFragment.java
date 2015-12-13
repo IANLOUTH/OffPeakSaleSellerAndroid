@@ -60,7 +60,9 @@ public class DashBoardFragment extends Fragment {
 	private DatePicker datePicker;
 	private Calendar calendar;
 	private int year, month, day;
+	private String mEndDate;
 	TextView vDatePicker;
+	boolean isDateselectionOk=false;
 	public DashBoardFragment(SlidingMenuActivity slidingMenuActivity) {
 	}
 
@@ -281,11 +283,13 @@ public class DashBoardFragment extends Fragment {
 			int mm = calendar.get(Calendar.MONTH);
 			int dd = calendar.get(Calendar.DAY_OF_MONTH);
 			DatePickerDialog dialog=new DatePickerDialog(getActivity(), this, yy, mm, dd);
+			 dialog.getDatePicker().setMaxDate(new Date().getTime());
 //			dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.BLACK));
 			return dialog;
 		}
 
 		public void onDateSet(DatePicker view, int yy, int mm, int dd) {
+			
 			populateSetDate(yy, mm+1, dd,vDatePicker);
 		}
 
@@ -293,9 +297,38 @@ public class DashBoardFragment extends Fragment {
 
 	public void populateSetDate(int year, int month, int day, TextView vPicker) {
 		String str_date = day+"-"+month+"-"+year;
-		 vPicker.setText(str_date);
-		 vPicker.setTextColor(Color.BLACK);
+		
+		if(vPicker==tvMerchantEndDate)
+		{
+			mEndDate=str_date;
+			isDateselectionOk=true;
+		}
+			SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+			try {
+				  Date date1 = sdf.parse(str_date);
+		          Date date2 = sdf.parse(mEndDate);
+		          System.out.println(sdf.format(date1));
+		            System.out.println(sdf.format(date2));
+
+		          if(date2.before(date1)){
+		                Toast.makeText(getActivity(), "Start date should be before than end date", Toast.LENGTH_SHORT).show();
+		              //  setDate(tvMerchantStartDate);
+		                isDateselectionOk=false;
+		            }else
+		            {
+		            	isDateselectionOk=true;
+		            }
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		 if(isDateselectionOk){
+			 vPicker.setText(str_date);
+			 vPicker.setTextColor(Color.BLACK);
 			 new GetSellerInfo().execute();
+		 }
+		 
+			 
 		/*Log.e("MONTH", str_date);
 		SimpleDateFormat readFormat = new SimpleDateFormat("yyyy-mm-dd",Locale.UK);
 		SimpleDateFormat  writeFormat = new SimpleDateFormat("dd MMM yyyy",Locale.UK);
