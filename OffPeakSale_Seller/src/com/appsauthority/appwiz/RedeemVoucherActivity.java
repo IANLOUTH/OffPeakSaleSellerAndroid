@@ -53,12 +53,12 @@ public class RedeemVoucherActivity extends BaseActivity implements
 					+ Helper.getSharedHelper().reatiler.getHeaderColor()));
 			btnScan.setBackgroundDrawable(Helper.getSharedHelper()
 					.getGradientDrawable(
-							Helper.getSharedHelper().reatiler.getHeaderColor()));
+							Helper.getSharedHelper().reatiler.getButton_color()));
 			btnValidate
 					.setBackgroundDrawable(Helper.getSharedHelper()
 							.getGradientDrawable(
 									Helper.getSharedHelper().reatiler
-											.getHeaderColor()));
+											.getButton_color()));
 			textViewHeader
 					.setTextColor(Color.parseColor("#"
 							+ Helper.getSharedHelper().reatiler

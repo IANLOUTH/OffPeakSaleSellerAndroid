@@ -191,6 +191,9 @@ public class Retailer implements Serializable {
 	@SerializedName("contactPhone")
 	public String contactPhone;
 	
+	@SerializedName("button_color")
+	public String button_color;
+	
 	@SerializedName("menuList")
 	public List<MenuItem> menuList;
 
@@ -198,6 +201,14 @@ public class Retailer implements Serializable {
 		super();
 	}
 
+	public String getButton_color() {
+		return button_color;
+	}
+
+	public void setButton_color(String button_color) {
+		this.button_color = button_color;
+	}
+	
 	public String getBackdropFile() {
 		return backdropFile;
 	}
