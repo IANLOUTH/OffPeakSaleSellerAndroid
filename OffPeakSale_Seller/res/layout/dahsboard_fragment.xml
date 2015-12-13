@@ -126,7 +126,7 @@
                         android:maxLines="1"
                         android:text="Email"
                         android:textColor="@android:color/black"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/dash_board_textsize" />
 
                     <TextView
                         android:id="@+id/tvMerchantName"
@@ -139,7 +139,7 @@
                         android:maxLines="1"
                         android:text="kfc@gmail.com"
                         android:textColor="@android:color/darker_gray"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/dash_board_textsize" />
                 </LinearLayout>
 
                 <View
@@ -166,7 +166,7 @@
                         android:maxLines="1"
                         android:text="Location"
                         android:textColor="@android:color/black"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/dash_board_textsize" />
 
                     <TextView
                         android:id="@+id/tvMerchantLocation"
@@ -179,7 +179,7 @@
                         android:maxLines="1"
                         android:text="Singapore"
                         android:textColor="@android:color/darker_gray"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/dash_board_textsize" />
                 </LinearLayout>
 
                 <View
@@ -206,7 +206,7 @@
                         android:maxLines="1"
                         android:text="Start Date "
                         android:textColor="@android:color/black"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/dash_board_textsize" />
 
                     <TextView
                         android:id="@+id/tvMerchantStartDate"
@@ -219,7 +219,7 @@
                         android:maxLines="1"
                         android:text="Select Start Date"
                         android:textColor="@android:color/darker_gray"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/dash_board_textsize" />
                 </LinearLayout>
                 <View
                     android:layout_width="fill_parent"
@@ -244,7 +244,7 @@
                         android:maxLines="1"
                         android:text="End Date "
                         android:textColor="@android:color/black"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/dash_board_textsize" />
 
                     <TextView
                         android:id="@+id/tvMerchantEndDate"
@@ -257,7 +257,7 @@
                         android:maxLines="1"
                         android:text="25th Dec 2015"
                         android:textColor="@android:color/black"
-                        android:textSize="14sp" />
+                        android:textSize="@dimen/dash_board_textsize" />
                 </LinearLayout>
 
                <!--  <View
@@ -290,7 +290,7 @@
                                 android:maxLines="1"
                                 android:text="50"
                                 android:textColor="@android:color/darker_gray"
-                                android:textSize="18sp" />
+                                android:textSize="@dimen/unit_value_textsize" />
 
                             <TextView
                                 android:id="@+id/tvRedeemed"
@@ -300,7 +300,7 @@
                                 android:maxLines="1"
                                 android:text="Redeemed"
                                 android:textColor="@android:color/holo_purple"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/unit_lable_textsize" />
 
                             <TextView
                                 android:id="@+id/tvSoldNumber"
@@ -312,7 +312,7 @@
                                 android:maxLines="1"
                                 android:text="200"
                                 android:textColor="@android:color/darker_gray"
-                                android:textSize="18sp" />
+                                android:textSize="@dimen/unit_value_textsize" />
 
                             <TextView
                                 android:id="@+id/tvSold"
@@ -323,7 +323,7 @@
                                 android:maxLines="1"
                                 android:text="Units Sold"
                                 android:textColor="@android:color/holo_purple"
-                                android:textSize="12sp" />
+                                android:textSize="@dimen/unit_lable_textsize" />
                         </LinearLayout>
 
                         <RelativeLayout
@@ -352,7 +352,7 @@
                                 android:maxLines="1"
                                 android:text="25%"
                                 android:textColor="@android:color/black"
-                                android:textSize="22sp" />
+                                android:textSize="@dimen/percentage_textsize" />
                         </RelativeLayout>
                     </LinearLayout>
                 </RelativeLayout>
@@ -378,6 +378,7 @@
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:background="@drawable/activate_qr__bg"
+            android:textSize="@dimen/button_text_size"
             android:text="Activate QR Code"
             android:textColor="#ffffff" />
     </RelativeLayout>

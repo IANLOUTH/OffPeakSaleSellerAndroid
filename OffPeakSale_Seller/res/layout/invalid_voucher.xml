@@ -29,7 +29,7 @@
             android:gravity="center"
             android:maxLines="1"
             android:text="Voucher used"
-            android:textSize="@dimen/header_textsize"
+            android:textSize="@dimen/vaoucher_msg_textsize"
             android:textStyle="bold" />
 
         <TextView
@@ -40,8 +40,8 @@
             android:gravity="center"
             android:maxLines="1"
             android:visibility="gone"
-            android:text="Voucher used on 11th Nov 2015"
-            android:textSize="@dimen/header_textsize"
+            android:text=""
+            android:textSize="@dimen/vaoucher_date_textsize"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -54,6 +54,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:background="@drawable/button_drawable"
+        android:textSize="@dimen/button_text_size"
         android:text="Ok"
         android:textColor="#ffffff" />
 
