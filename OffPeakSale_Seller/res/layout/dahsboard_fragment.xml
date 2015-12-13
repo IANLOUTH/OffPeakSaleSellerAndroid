@@ -15,7 +15,7 @@
         android:id="@+id/llForm"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:visibility="visible" >
+        android:visibility="gone" >
 
         <ScrollView
             android:layout_width="match_parent"
@@ -217,8 +217,8 @@
                         android:layout_weight="1"
                         android:gravity="right"
                         android:maxLines="1"
-                        android:text="15th Nov 2015"
-                        android:textColor="@android:color/black"
+                        android:text="Select Start Date"
+                        android:textColor="@android:color/darker_gray"
                         android:textSize="14sp" />
                 </LinearLayout>
                 <View
