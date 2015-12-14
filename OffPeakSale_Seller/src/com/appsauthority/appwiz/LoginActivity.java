@@ -59,7 +59,7 @@ public class LoginActivity extends BaseActivity implements UserLoginCaller,
 	private ArrayList<Country> countryList = new ArrayList<Country>();
 	private ArrayList<String> countryNameList = new ArrayList<String>();
 	private ArrayList<String> countrySearchList = new ArrayList<String>();
-
+	public static boolean isNeeHelpClicked=false;
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		getActionBar().hide();
@@ -110,10 +110,10 @@ public class LoginActivity extends BaseActivity implements UserLoginCaller,
 
 			@Override
 			public void onClick(View arg0) {
-				
+				isNeeHelpClicked=true;
 				Intent intent = new Intent(LoginActivity.this,
-						WebActivity.class);
-				intent.putExtra("terms_of_use_link", retailer.aboutUrl);
+						SlidingMenuActivity.class);
+				//intent.putExtra("terms_of_use_link", retailer.aboutUrl);
 				startActivity(intent);
 			}
 		});

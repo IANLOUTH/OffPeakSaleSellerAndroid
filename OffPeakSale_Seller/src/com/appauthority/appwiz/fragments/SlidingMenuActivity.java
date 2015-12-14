@@ -754,8 +754,16 @@ ContactFragment contactFragment;
 			mDrawerLayout.closeDrawer(viewFlipper);
 			return;
 		}
+		Fragment fragment;
+		if(LoginActivity.isNeeHelpClicked==true)
+		{
+			contactFragment=new ContactFragment();
+			fragment = contactFragment;
+		}else
+		{
+			fragment = new DashBoardFragment(this);
+		}
 
-		Fragment fragment = new DashBoardFragment(this);
 		switch (itemType) {
 		case HOME:
 			// fragment = new DashBoardFragment(this);

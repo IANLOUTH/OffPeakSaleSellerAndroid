@@ -20,6 +20,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.appsauthority.appwiz.LoginActivity;
 import com.appsauthority.appwiz.models.Retailer;
 import com.appsauthority.appwiz.utils.Constants;
 import com.appsauthority.appwiz.utils.HTTPHandler;
@@ -214,7 +215,14 @@ public class ContactFragment extends Fragment implements OnClickListener {
 							Toast.makeText(getActivity(),
 									"" + json.getString("errorMessage"),
 									Toast.LENGTH_SHORT).show();
-							clearAllField();
+							if(LoginActivity.isNeeHelpClicked==true)
+							{
+								LoginActivity.isNeeHelpClicked=false;
+								getActivity().finish();
+							}else
+							{
+								clearAllField();
+							}
 						} else {
 							Toast.makeText(getActivity(),
 									"Contact Email Sent Failed",

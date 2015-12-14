@@ -235,6 +235,7 @@ public class OrderDetailActivity extends BaseActivity implements
 							Double.parseDouble(orderObj.outletLat),
 							Double.parseDouble(orderObj.outletLong));
 			tvOrderDistance.setText(Html.fromHtml(resturantDistance));
+			tvOrderDistance.setVisibility(View.GONE);
 		} else {
 			tvOrderDistance.setVisibility(View.GONE);
 		}
@@ -252,20 +253,32 @@ public class OrderDetailActivity extends BaseActivity implements
 
 		// tvOrderTotal.setText("Total "+Helper.getSharedHelper()
 		// .getCurrencySymbol(selectedCurrencyCode)+orderObj.orderTotal);
-		String comp[] = orderObj.orderDate.split(" ");
-
-		String date = "";
-		if (comp.length > 0) {
-			date = comp[0];
-		}
 
 		if (orderObj.shippingStatus.equals("Expired")) {
+			String comp[] = orderObj.orderUsedOn.split(" ");
+
+			String date = "";
+			if (comp.length > 0) {
+				date = comp[0];
+			}
 			String expiry = "<b>Expired On   </b>&nbsp;&nbsp;" + date;
 			tvOrderExpiry.setText(Html.fromHtml(expiry));
 		} else if (orderObj.shippingStatus.equals("Redeemed")) {
+			String comp[] = orderObj.orderUsedOn.split(" ");
+
+			String date = "";
+			if (comp.length > 0) {
+				date = comp[0];
+			}
 			String expiry = "<b>Redeemed On </b>&nbsp;&nbsp;" + date;
 			tvOrderExpiry.setText(Html.fromHtml(expiry));
 		} else {
+			String comp[] = orderObj.orderExpiryDate.split(" ");
+
+			String date = "";
+			if (comp.length > 0) {
+				date = comp[0];
+			}
 			String expiry = "<b>Expiry  </b>&nbsp;&nbsp;" + date;
 			tvOrderExpiry.setText(Html.fromHtml(expiry));
 		}
@@ -289,14 +302,12 @@ public class OrderDetailActivity extends BaseActivity implements
 		tvNewPriceDetails.setText(Helper.getSharedHelper().getCurrencySymbol(
 				selectedCurrencyCode)
 				+ orderObj.products.get(0).newPrice);
-		if (!orderObj.discountAmt.startsWith("0")) {
-			String discount = "<b>Discount </b> "
-					+ Helper.getSharedHelper().getCurrencySymbol(
-							selectedCurrencyCode) + orderObj.discountAmt;
+	//	if (!orderObj.discountAmt.startsWith("0")) {
+			String discount = "<b>Discount </b> "+ orderObj.discountAmt+"%";
 			tvOrderDiscount.setText(Html.fromHtml(discount));
-		} else {
-			tvOrderDiscount.setVisibility(View.GONE);
-		}
+		//} else {
+		//	tvOrderDiscount.setVisibility(View.GONE);
+		//}
 	}
 
 	private void setMapFooter() {
