@@ -236,7 +236,7 @@
         android:id="@+id/llBotton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="15dp"
         android:layout_marginLeft="@dimen/left_right_margin"
         android:layout_marginRight="@dimen/left_right_margin"
         android:layout_marginTop="5dp"
@@ -251,7 +251,7 @@
             android:text="Cancel" />
 
         <View
-            android:layout_width="5dp"
+            android:layout_width="15dp"
             android:layout_height="match_parent" />
 
         <Button

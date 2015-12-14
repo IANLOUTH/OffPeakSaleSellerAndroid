@@ -53,6 +53,7 @@
             android:text="Enter Voucher Code"
             android:textColor="@color/triangle_underline_color"
             android:textSize="12sp"
+            android:layout_marginBottom="3dp"
             android:textStyle="normal" />
 
         <EditText

@@ -106,7 +106,7 @@ public class OrderDetailActivity extends BaseActivity implements
 					.setBackgroundDrawable(Helper.getSharedHelper()
 							.getGradientDrawable(
 									Helper.getSharedHelper().reatiler
-											.getHeaderColor()));
+											.getButton_color()));
 
 			btnCancle
 					.setTextColor(Color.parseColor("#"

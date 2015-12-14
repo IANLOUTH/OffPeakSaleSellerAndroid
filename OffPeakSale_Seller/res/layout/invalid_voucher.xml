@@ -39,10 +39,11 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:maxLines="1"
-            android:visibility="gone"
             android:text=""
+            android:textColor="@color/triangle_underline_color"
             android:textSize="@dimen/vaoucher_date_textsize"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:visibility="visible" />
     </LinearLayout>
 
     <Button
@@ -54,8 +55,8 @@
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:background="@drawable/button_drawable"
-        android:textSize="@dimen/button_text_size"
         android:text="OK"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:textSize="@dimen/button_text_size" />
 
 </RelativeLayout>
