@@ -271,6 +271,10 @@ ContactFragment contactFragment;
 			loadProductDetail(pid);
 		}
 
+		if(LoginActivity.isNeeHelpClicked==true){
+			textViewHeader.setText("Need Help");
+			imageViewOverflow.setVisibility(View.GONE);
+		}
 	}
 
 	void populateDrawerItem() {
