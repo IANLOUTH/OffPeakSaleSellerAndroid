@@ -61,7 +61,7 @@ public class DashBoardFragment extends Fragment {
 	private DatePicker datePicker;
 	private Calendar calendar;
 	private int year, month, day;
-	private String mEndDate;
+	private String mEndDate="",mStartDate="";
 	TextView vDatePicker;
 	boolean isDateselectionOk=false;
 	public DashBoardFragment(SlidingMenuActivity slidingMenuActivity) {
@@ -160,7 +160,7 @@ public class DashBoardFragment extends Fragment {
 		month = calendar.get(Calendar.MONTH);
 		day = calendar.get(Calendar.DAY_OF_MONTH);
 		
-		populateSetDate( year, month, day, tvMerchantEndDate);
+		populateSetDate( year, month+1, day, tvMerchantEndDate);
 
 		tvMerchantStartDate.setOnClickListener(new OnClickListener() {
 			
@@ -299,29 +299,37 @@ public class DashBoardFragment extends Fragment {
 	public void populateSetDate(int year, int month, int day, TextView vPicker) {
 		String str_date = day+"-"+month+"-"+year;
 		
+		Log.e("DATEEEE", str_date);
 		if(vPicker==tvMerchantEndDate)
 		{
 			mEndDate=str_date;
 			isDateselectionOk=true;
+		}else
+		{
+			mStartDate=str_date;
 		}
 			SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
 			try {
-				  Date date1 = sdf.parse(str_date);
+				if(!mStartDate.equals(""))
+				{
+				  Date date1 = sdf.parse(mStartDate);
 		          Date date2 = sdf.parse(mEndDate);
 		          System.out.println(sdf.format(date1));
 		            System.out.println(sdf.format(date2));
 
 		          if(date2.before(date1)){
-		                Toast.makeText(getActivity(), "Start date should be before than end date", Toast.LENGTH_SHORT).show();
+		                Toast.makeText(getActivity(), "Start date should be before end date", Toast.LENGTH_SHORT).show();
 		              //  setDate(tvMerchantStartDate);
 		                isDateselectionOk=false;
 		            }else
 		            {
 		            	isDateselectionOk=true;
 		            }
+				}
 			} catch (ParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				isDateselectionOk=false;
 			}
 		 if(isDateselectionOk){
 			 vPicker.setText(str_date);
