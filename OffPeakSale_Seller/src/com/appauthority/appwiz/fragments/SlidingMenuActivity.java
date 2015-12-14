@@ -798,9 +798,9 @@ ContactFragment contactFragment;
 			fragment = contactFragment;
 			break;
 		case TERMSNCONDITION:
-			// webFragment = new WebFragment();
-			// webFragment.url = Helper.getSharedHelper().termsConditions;
-			// fragment = webFragment;
+			 webFragment = new WebFragment();
+			 webFragment.url = Helper.getSharedHelper().termsConditions;
+			 fragment = webFragment;
 			break;
 		case LOOKBOOK:
 			// fragment = new LookBookFragment();

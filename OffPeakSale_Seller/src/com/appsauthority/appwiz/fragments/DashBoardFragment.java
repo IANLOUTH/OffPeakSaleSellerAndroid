@@ -245,7 +245,7 @@ public class DashBoardFragment extends Fragment {
 	public void setTextViews(Profile userProfile) {
 
 		tvMerchantName1.setText(userProfile.company_name);
-		tvMerchantUserId.setText(userProfile.getPhone_num());
+		tvMerchantUserId.setText(userProfile.getPhone());
 		tvMerchantName.setText(userProfile.getEmail());
 		tvMerchantLocation.setText(userProfile.getCountry());
 
