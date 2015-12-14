@@ -264,7 +264,7 @@ public class DashBoardFragment extends Fragment {
 			progressBar.setProgress(percentage);
 			tvRedeemedNumber.setText(redeemed);
 			tvSoldNumber.setText(sold);
-			tvProgressText.setText(percentage);
+			tvProgressText.setText(Integer.toString(percentage));
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

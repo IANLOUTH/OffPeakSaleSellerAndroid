@@ -248,6 +248,7 @@
             android:layout_height="@dimen/button_height"
             android:layout_weight="1"
             android:background="@drawable/button_drawable"
+            android:textSize="@dimen/button_text_size"
             android:text="Cancel" />
 
         <View
@@ -260,6 +261,7 @@
             android:layout_height="@dimen/button_height"
             android:layout_weight="1"
             android:background="@drawable/button_drawable"
+            android:textSize="@dimen/button_text_size"
             android:text="Redeem" />
     </LinearLayout>
 
