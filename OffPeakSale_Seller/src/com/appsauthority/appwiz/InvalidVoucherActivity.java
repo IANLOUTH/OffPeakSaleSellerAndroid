@@ -22,6 +22,7 @@ import android.widget.TextView;
 public class InvalidVoucherActivity extends BaseActivity {
 
 	Boolean isValid;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -40,18 +41,26 @@ public class InvalidVoucherActivity extends BaseActivity {
 		Intent intent = getIntent();
 		String msg = intent.getStringExtra("msg");
 		isValid = intent.getBooleanExtra("isValide", false);
-		String usednon=intent.getStringExtra("usednon");
+		String usednon = intent.getStringExtra("usednon");
 		voucherStatus.setText(msg);
-		voucherStatusDate.setText(msg+" on "+usednon);
+		if (usednon != null) {
+			voucherStatusDate.setText(msg + " on " + usednon);
+		}else{
+			voucherStatusDate.setVisibility(View.GONE);;
+		}
+		
 		if (isValid) {
-			voucherStatus
-					.setTextColor(Color.parseColor("#"
-							+ Helper.getSharedHelper().reatiler
-									.getHeaderColor()));
+			header.setText("Voucher Redeemed");
+		} else {
+			header.setText("Invalid Voucher");
+		}
+		if (isValid) {
+			voucherStatus.setTextColor(Color.parseColor("#"
+					+ Helper.getSharedHelper().reatiler.getHeaderColor()));
 		} else {
 			voucherStatus.setTextColor(getResources().getColor(
 					R.color.invalid_msg_color));
-			
+
 		}
 		try {
 			headerView.setBackgroundColor(Color.parseColor("#"
@@ -65,8 +74,9 @@ public class InvalidVoucherActivity extends BaseActivity {
 			// + Helper.getSharedHelper().reatiler.getRetailerTextColor()));
 			headerView.setBackgroundColor(Color.parseColor("#"
 					+ Helper.getSharedHelper().reatiler.getHeaderColor()));
-			
-			btnOk.setBackgroundDrawable(Helper.getSharedHelper()
+
+			btnOk.setBackgroundDrawable(Helper
+					.getSharedHelper()
 					.getGradientDrawable(
 							Helper.getSharedHelper().reatiler.getButton_color()));
 			btnOk.setTextColor(Color.parseColor("#"
@@ -79,7 +89,7 @@ public class InvalidVoucherActivity extends BaseActivity {
 			// TODO: handle exception
 		}
 		back.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
@@ -87,7 +97,7 @@ public class InvalidVoucherActivity extends BaseActivity {
 			}
 		});
 		btnOk.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
@@ -96,6 +106,7 @@ public class InvalidVoucherActivity extends BaseActivity {
 		});
 
 	}
+
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -109,12 +120,13 @@ public class InvalidVoucherActivity extends BaseActivity {
 
 		return super.onKeyDown(keyCode, event);
 	}
-	void closeActivity(){
+
+	void closeActivity() {
 		if (isValid) {
 			Intent intent = new Intent(context, SlidingMenuActivity.class);
 			intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			startActivity(intent);
-		}else{
+		} else {
 			finish();
 		}
 	}

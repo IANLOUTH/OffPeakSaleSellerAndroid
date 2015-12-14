@@ -103,7 +103,8 @@ public class DashBoardFragment extends Fragment {
 		tvRedeemed = (TextView) root.findViewById(R.id.tvRedeemed);
 		tvSoldNumber = (TextView) root.findViewById(R.id.tvSoldNumber);
 		tvSold = (TextView) root.findViewById(R.id.tvSold);
-		tvProgressText = (TextView) root.findViewById(R.id.tvProgressText);
+		RelativeLayout rlProgressView = (RelativeLayout) root.findViewById(R.id.rlProgressView);
+		tvProgressText = (TextView) rlProgressView.findViewById(R.id.tvProgressTextField);
 
 		progressBar = (ProgressBar) root.findViewById(R.id.progressBar);
 		progressBarDownload = (ProgressBar) root.findViewById(R.id.progressBarDownload);
@@ -261,9 +262,9 @@ public class DashBoardFragment extends Fragment {
 		try {
 			int percentage = (int) ((Float.parseFloat(redeemed) / Float.parseFloat(sold)) * 100);
 			progressBar.setProgress(percentage);
-			tvProgressText.setText(percentage);
 			tvRedeemedNumber.setText(redeemed);
 			tvSoldNumber.setText(sold);
+			tvProgressText.setText(percentage);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

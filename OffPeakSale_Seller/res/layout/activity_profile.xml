@@ -314,16 +314,37 @@
                                 android:max="100"
                                 android:progress="25"
                                 android:progressDrawable="@drawable/circular_progress_bar" />
-                                <TextView
-                                android:id="@+id/tvProgressText"
+
+                            <RelativeLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:layout_centerInParent="true"
-                                android:maxLines="1"
-                                android:text="25%"
-                                android:textColor="@android:color/black"
-                                android:textSize="20sp" />
+                                android:layout_centerInParent="true" >
+
+                                <TextView
+                                    android:id="@+id/tvProgressTextd"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:text="25"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/percentage_textsize" />
+
+                                <TextView
+                                    android:id="@+id/tvPercentaged"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@+id/tvProgressText"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:minWidth="20dp"
+                                    android:paddingBottom="20dp"
+                                    android:text="%"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="13dp" />
+                            </RelativeLayout>
                         </RelativeLayout>
                     </LinearLayout>
 

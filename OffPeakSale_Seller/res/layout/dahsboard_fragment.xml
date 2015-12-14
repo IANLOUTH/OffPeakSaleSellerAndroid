@@ -347,27 +347,28 @@
                                 android:progressDrawable="@drawable/circular_progress_bar" />
 
                             <RelativeLayout
+                                android:id="@+id/rlProgressView"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" 
                                 android:layout_centerInParent="true">
 
                                 <TextView
-                                    android:id="@+id/tvProgressText"
+                                    android:id="@+id/tvProgressTextField"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_centerInParent="true"
                                     android:gravity="center"
                                     android:maxLines="1"
-                                    android:text="25"
+                                    android:text="0"
                                     android:textColor="@android:color/black"
                                     android:textSize="@dimen/percentage_textsize" />
 
                                 <TextView
-                                    android:id="@+id/tvPercentage"
+                                    android:id="@+id/tvPercentageField"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_centerVertical="true"
-                                    android:layout_toRightOf="@+id/tvProgressText"
+                                    android:layout_toRightOf="@+id/tvProgressTextField"
                                     android:gravity="center"
                                     android:maxLines="1"
                                     android:paddingBottom="20dp"

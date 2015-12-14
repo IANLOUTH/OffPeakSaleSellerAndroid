@@ -61,7 +61,7 @@ public class SplashscreenActivity extends BaseActivity {
 		if (spref.contains(Constants.SPLASH_IMG)) {
 			imageCacheloader.displayImage(
 					spref.getString(Constants.SPLASH_IMG, ""),
-					R.drawable.splash_bg, imageViewSplashScreen);
+					R.drawable.image_placeholder, imageViewSplashScreen);
 		}
 
 		if (spref.contains(Constants.POWERED_BY)) {
