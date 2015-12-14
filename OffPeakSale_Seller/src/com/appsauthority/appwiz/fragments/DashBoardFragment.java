@@ -32,6 +32,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -121,9 +122,9 @@ public class DashBoardFragment extends Fragment {
 			tvMerchantStartDate.setTypeface(Helper.getSharedHelper().normalFont);
 			tvMerchantEndDateText.setTypeface(Helper.getSharedHelper().boldFont);
 			tvMerchantEndDate.setTypeface(Helper.getSharedHelper().normalFont);
-			tvRedeemedNumber.setTypeface(Helper.getSharedHelper().boldFont);
+			tvRedeemedNumber.setTypeface(Helper.getSharedHelper().normalFont);
 			tvRedeemed.setTypeface(Helper.getSharedHelper().normalFont);
-			tvSoldNumber.setTypeface(Helper.getSharedHelper().boldFont);
+			tvSoldNumber.setTypeface(Helper.getSharedHelper().normalFont);
 			tvSold.setTypeface(Helper.getSharedHelper().normalFont);
 			tvProgressText.setTypeface(Helper.getSharedHelper().normalFont);
 			ActivateQr.setBackgroundDrawable(
@@ -260,7 +261,7 @@ public class DashBoardFragment extends Fragment {
 		try {
 			int percentage = (int) ((Float.parseFloat(redeemed) / Float.parseFloat(sold)) * 100);
 			progressBar.setProgress(percentage);
-			tvProgressText.setText(percentage + "%");
+			tvProgressText.setText(percentage);
 			tvRedeemedNumber.setText(redeemed);
 			tvSoldNumber.setText(sold);
 		} catch (Exception e) {

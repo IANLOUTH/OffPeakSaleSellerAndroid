@@ -15,7 +15,7 @@
         android:id="@+id/llForm"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:visibility="gone" >
+        android:visibility="visible" >
 
         <ScrollView
             android:layout_width="match_parent"
@@ -221,11 +221,13 @@
                         android:textColor="@android:color/darker_gray"
                         android:textSize="@dimen/dash_board_textsize" />
                 </LinearLayout>
+
                 <View
                     android:layout_width="fill_parent"
                     android:layout_height="1dp"
                     android:background="@android:color/darker_gray" />
-                 <LinearLayout
+
+                <LinearLayout
                     android:id="@+id/llAccountEndDate"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -260,15 +262,16 @@
                         android:textSize="@dimen/dash_board_textsize" />
                 </LinearLayout>
 
-               <!--  <View
+                <!--
+                     <View
                     android:layout_width="fill_parent"
                     android:layout_height="1dp"
-                    android:background="@android:color/darker_gray" /> -->
+                    android:background="@android:color/darker_gray" />
+                -->
 
                 <RelativeLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="200dp"
-                    >
+                    android:layout_height="200dp" >
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -329,8 +332,8 @@
                         <RelativeLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="50dp"
-                            android:layout_gravity="center_vertical" >
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="50dp" >
 
                             <ProgressBar
                                 android:id="@+id/progressBar"
@@ -343,16 +346,36 @@
                                 android:progress="0"
                                 android:progressDrawable="@drawable/circular_progress_bar" />
 
-                            <TextView
-                                android:id="@+id/tvProgressText"
+                            <RelativeLayout
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerInParent="true"
-                                android:gravity="center"
-                                android:maxLines="1"
-                                android:text="25%"
-                                android:textColor="@android:color/black"
-                                android:textSize="@dimen/percentage_textsize" />
+                                android:layout_height="wrap_content" 
+                                android:layout_centerInParent="true">
+
+                                <TextView
+                                    android:id="@+id/tvProgressText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:text="25"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="@dimen/percentage_textsize" />
+
+                                <TextView
+                                    android:id="@+id/tvPercentage"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toRightOf="@+id/tvProgressText"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:paddingBottom="20dp"
+                                    android:minWidth="20dp"
+                                    android:text="%"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="13dp" />
+                            </RelativeLayout>
                         </RelativeLayout>
                     </LinearLayout>
                 </RelativeLayout>
@@ -378,9 +401,9 @@
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:background="@drawable/activate_qr__bg"
-            android:textSize="@dimen/button_text_size"
             android:text="Activate QR Code"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:textSize="@dimen/button_text_size" />
     </RelativeLayout>
 
 </RelativeLayout>

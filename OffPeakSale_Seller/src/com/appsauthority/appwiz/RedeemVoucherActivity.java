@@ -77,8 +77,8 @@ public class RedeemVoucherActivity extends BaseActivity implements
 							+ Helper.getSharedHelper().reatiler
 									.getRetailerTextColor()));
 			etVoucherCode.setTextColor(Color.BLACK);
-			btnScan.setTypeface(Helper.getSharedHelper().normalFont);
-			btnValidate.setTypeface(Helper.getSharedHelper().normalFont);
+			btnScan.setTypeface(Helper.getSharedHelper().boldFont);
+			btnValidate.setTypeface(Helper.getSharedHelper().boldFont);
 			etVoucherCode.setTypeface(Helper.getSharedHelper().normalFont);
 			tvOr.setTypeface(Helper.getSharedHelper().normalFont);
 			tvEnterVoucherCode.setTypeface(Helper.getSharedHelper().normalFont);

@@ -71,8 +71,8 @@ public class InvalidVoucherActivity extends BaseActivity {
 							Helper.getSharedHelper().reatiler.getButton_color()));
 			btnOk.setTextColor(Color.parseColor("#"
 					+ Helper.getSharedHelper().reatiler.getRetailerTextColor()));
-			btnOk.setTypeface(Helper.getSharedHelper().normalFont);
-			voucherStatus.setTypeface(Helper.getSharedHelper().boldFont);
+			btnOk.setTypeface(Helper.getSharedHelper().boldFont);
+			voucherStatus.setTypeface(Helper.getSharedHelper().normalFont);
 			header.setTypeface(Helper.getSharedHelper().boldFont);
 
 		} catch (Exception e) {
