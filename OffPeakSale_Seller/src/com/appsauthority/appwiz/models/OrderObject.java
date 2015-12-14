@@ -28,6 +28,10 @@ public class OrderObject implements Serializable {
 	@SerializedName("reward_redeemed")
 	public String reward_redeemed;
 
+	@SerializedName("orderUsedOn")
+	public String orderUsedOn;
+	
+	
 	@SerializedName("shippingAmt")
 	public String shippingAmt;
 
