@@ -85,6 +85,7 @@ public class LoginHandler {
 //										.getRewardPoints();
 								caller.loggedIn(true,
 										"Sucessfully logged in",userProfile);
+								LoginActivity.isNeeHelpClicked=false;
 							}
 						} else {
 							if (caller != null) {
