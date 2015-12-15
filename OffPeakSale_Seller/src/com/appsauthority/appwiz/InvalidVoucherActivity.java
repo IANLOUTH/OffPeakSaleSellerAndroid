@@ -37,6 +37,7 @@ public class InvalidVoucherActivity extends BaseActivity {
 		TextView voucherStatus = (TextView) findViewById(R.id.voucherStatus);
 		TextView voucherStatusDate = (TextView) findViewById(R.id.voucherStatusDate);
 		Button btnOk = (Button) findViewById(R.id.btnOk);
+		ImageView imgMSG = (ImageView) findViewById(R.id.imgMSG);
 
 		Intent intent = getIntent();
 		String msg = intent.getStringExtra("msg");
@@ -44,15 +45,18 @@ public class InvalidVoucherActivity extends BaseActivity {
 		String usednon = intent.getStringExtra("usednon");
 		voucherStatus.setText(msg);
 		if (usednon != null) {
-			voucherStatusDate.setText(msg + " on " + usednon);
+			voucherStatusDate.setText(msg + " On " + usednon);
 		}else{
 			voucherStatusDate.setVisibility(View.GONE);;
 		}
 		
 		if (isValid) {
 			header.setText("Voucher Redeemed");
+			imgMSG.setImageDrawable(getResources().getDrawable(R.drawable.smily_happy));
 		} else {
 			header.setText("Invalid Voucher");
+			imgMSG.setImageDrawable(getResources().getDrawable(R.drawable.smiley_icon));
+			
 		}
 		if (isValid) {
 			voucherStatus.setTextColor(Color.parseColor("#"

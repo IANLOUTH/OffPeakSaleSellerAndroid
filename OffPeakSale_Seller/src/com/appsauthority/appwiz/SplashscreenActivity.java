@@ -39,13 +39,14 @@ public class SplashscreenActivity extends BaseActivity {
 
 	private Retailer retailer;
 	String pid;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		getActionBar().hide();
 		Intent intent = getIntent();
 		pid = intent.getStringExtra("pid");
-		
+
 		setContentView(R.layout.activity_splashscreen);
 
 		textViewOperator = (TextView) findViewById(R.id.textViewOperator);
@@ -53,7 +54,7 @@ public class SplashscreenActivity extends BaseActivity {
 		imageViewSplashScreen = (ImageView) findViewById(R.id.imageViewSplashScreen);
 
 		spref = PreferenceManager.getDefaultSharedPreferences(this);
-		
+
 		Helper.getSharedHelper().currency_code = spref.getString(
 				Constants.KEY_USER_CURRECY, "");
 		Helper.getSharedHelper().setCurrencySymbol();
@@ -251,7 +252,7 @@ public class SplashscreenActivity extends BaseActivity {
 				Helper.getSharedHelper().boldFont = boldFont;
 
 				proccedToNextScreen();
-				
+
 				Log.i("TIMMINGS", "SPLASH FINISHED");
 
 				// new Handler().postDelayed(new Runnable() {
@@ -316,22 +317,27 @@ public class SplashscreenActivity extends BaseActivity {
 		}
 	}
 
-	void proccedToNextScreen(){
-		String emailId = spref.getString(Constants.KEY_EMAIL, "");
-		if (!emailId.equalsIgnoreCase("")) {
-			Intent intent = new Intent(getApplicationContext(),
-						SlidingMenuActivity.class);
-				if (pid != null) {
-					intent.putExtra("pid", pid);
+	void proccedToNextScreen() {
+		new Handler().postDelayed(new Runnable() {
+			@Override
+			public void run() {
+				String emailId = spref.getString(Constants.KEY_EMAIL, "");
+				if (!emailId.equalsIgnoreCase("")) {
+					Intent intent = new Intent(getApplicationContext(),
+							SlidingMenuActivity.class);
+					if (pid != null) {
+						intent.putExtra("pid", pid);
+					}
+					startActivity(intent);
+					finish();
+				} else {
+					Intent intent = new Intent(getApplicationContext(),
+							LoginActivity.class);
+					startActivity(intent);
+					finish();
 				}
-				startActivity(intent);
-				finish();
-		}else{
-			Intent intent = new Intent(getApplicationContext(),
-						LoginActivity.class);
-				startActivity(intent);
-				finish();
-		}
+			}
+		}, 2000);
 	}
 
 	Boolean processOfflineData() {

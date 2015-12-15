@@ -233,7 +233,7 @@ public class OrderDetailActivity extends BaseActivity implements
 					+ Helper.getSharedHelper().getDistanceBetween(
 							Constants.TARGET_LAT, Constants.TARGET_LAT,
 							Double.parseDouble(orderObj.outletLat),
-							Double.parseDouble(orderObj.outletLong));
+							Double.parseDouble(orderObj.outletLong))+"KM";
 			tvOrderDistance.setText(Html.fromHtml(resturantDistance));
 			tvOrderDistance.setVisibility(View.GONE);
 		} else {
@@ -303,7 +303,7 @@ public class OrderDetailActivity extends BaseActivity implements
 				selectedCurrencyCode)
 				+ orderObj.products.get(0).newPrice);
 	//	if (!orderObj.discountAmt.startsWith("0")) {
-			String discount = "<b>Discount </b> "+ orderObj.discountAmt+"%";
+			String discount = "<b>Discount </b> "+ orderObj.products.get(0).offpeakDiscount+"%";
 			tvOrderDiscount.setText(Html.fromHtml(discount));
 		//} else {
 		//	tvOrderDiscount.setVisibility(View.GONE);
