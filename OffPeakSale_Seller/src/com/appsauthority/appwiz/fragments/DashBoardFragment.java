@@ -53,7 +53,9 @@ public class DashBoardFragment extends Fragment {
 	TextView tvMerchantAccount, tvMerchantName1, tvMerchantUserIdText, tvMerchantUserId, tvMerchantText, tvMerchantName,
 			tvMerchantLocationText, tvMerchantLocation, tvMerchantStartDateText, tvMerchantStartDate,
 			tvMerchantEndDateText, tvMerchantEndDate, tvRedeemedNumber, tvRedeemed, tvSoldNumber, tvSold,
-			tvProgressText;
+			tvProgressText,tvMerchantListPriceText, tvMerchantListPrice, tvMerchantDiscountText, tvMerchantDiscount, tvMerchantPaymentGatewayText,
+			tvMerchantPaymentGateway,tvMerchantSalesComissionText,tvMerchantSalesComission,tvMerchantUnitNetText,tvMerchantUnitNet,tvMerchantTotalNetText,
+			tvMerchantTotalNet;
 	ProgressBar progressBar;
 	ProgressBar progressBarDownload;
 	RelativeLayout rootLayout;
@@ -98,6 +100,19 @@ public class DashBoardFragment extends Fragment {
 		tvMerchantStartDate = (TextView) root.findViewById(R.id.tvMerchantStartDate);
 		tvMerchantEndDateText = (TextView) root.findViewById(R.id.tvMerchantEndDateText);
 		tvMerchantEndDate = (TextView) root.findViewById(R.id.tvMerchantEndDate);
+		
+		tvMerchantListPriceText = (TextView) root.findViewById(R.id.tvMerchantListPriceText);
+		tvMerchantListPrice = (TextView) root.findViewById(R.id.tvMerchantListPrice);
+		tvMerchantDiscountText = (TextView) root.findViewById(R.id.tvMerchantDiscountText);
+		tvMerchantDiscount = (TextView) root.findViewById(R.id.tvMerchantDiscount);
+		tvMerchantPaymentGatewayText = (TextView) root.findViewById(R.id.tvMerchantPaymentGatewayText);
+		tvMerchantPaymentGateway = (TextView) root.findViewById(R.id.tvMerchantPaymentGateway);
+		tvMerchantSalesComissionText = (TextView) root.findViewById(R.id.tvMerchantSalesComissionText);
+		tvMerchantSalesComission = (TextView) root.findViewById(R.id.tvMerchantSalesComission);
+		tvMerchantUnitNetText = (TextView) root.findViewById(R.id.tvMerchantUnitNetText);
+		tvMerchantUnitNet = (TextView) root.findViewById(R.id.tvMerchantUnitNet);
+		tvMerchantTotalNetText = (TextView) root.findViewById(R.id.tvMerchantTotalNetText);
+		tvMerchantTotalNet = (TextView) root.findViewById(R.id.tvMerchantTotalNet);
 
 		tvRedeemedNumber = (TextView) root.findViewById(R.id.tvRedeemedNumber);
 		tvRedeemed = (TextView) root.findViewById(R.id.tvRedeemed);
@@ -128,6 +143,20 @@ public class DashBoardFragment extends Fragment {
 			tvSoldNumber.setTypeface(Helper.getSharedHelper().normalFont);
 			tvSold.setTypeface(Helper.getSharedHelper().normalFont);
 			tvProgressText.setTypeface(Helper.getSharedHelper().normalFont);
+			
+			tvMerchantListPriceText.setTypeface(Helper.getSharedHelper().boldFont);
+			tvMerchantListPrice.setTypeface(Helper.getSharedHelper().normalFont);
+			tvMerchantDiscountText.setTypeface(Helper.getSharedHelper().boldFont);
+			tvMerchantDiscount.setTypeface(Helper.getSharedHelper().normalFont);
+			tvMerchantPaymentGatewayText.setTypeface(Helper.getSharedHelper().boldFont);
+			tvMerchantPaymentGateway.setTypeface(Helper.getSharedHelper().normalFont);
+			tvMerchantSalesComissionText.setTypeface(Helper.getSharedHelper().boldFont);
+			tvMerchantSalesComission.setTypeface(Helper.getSharedHelper().normalFont);
+			tvMerchantUnitNetText.setTypeface(Helper.getSharedHelper().boldFont);
+			tvMerchantUnitNet.setTypeface(Helper.getSharedHelper().normalFont);
+			tvMerchantTotalNetText.setTypeface(Helper.getSharedHelper().boldFont);
+			tvMerchantTotalNet.setTypeface(Helper.getSharedHelper().normalFont);
+			
 			ActivateQr.setBackgroundDrawable(
 					Helper.getSharedHelper().getGradientDrawable(Helper.getSharedHelper().reatiler.getButton_color()));
 			ActivateQr.setTextColor(Color.parseColor("#" + Helper.getSharedHelper().reatiler.getRetailerTextColor()));
