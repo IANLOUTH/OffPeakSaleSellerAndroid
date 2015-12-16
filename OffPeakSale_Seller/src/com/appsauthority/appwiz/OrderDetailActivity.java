@@ -233,14 +233,20 @@ public class OrderDetailActivity extends BaseActivity implements
 					+ Helper.getSharedHelper().getDistanceBetween(
 							Constants.TARGET_LAT, Constants.TARGET_LAT,
 							Double.parseDouble(orderObj.outletLat),
-							Double.parseDouble(orderObj.outletLong))+"KM";
+							Double.parseDouble(orderObj.outletLong))+" KM";
 			tvOrderDistance.setText(Html.fromHtml(resturantDistance));
 			tvOrderDistance.setVisibility(View.GONE);
 		} else {
 			tvOrderDistance.setVisibility(View.GONE);
 		}
+		String statusValue;
+		if (orderObj.shippingStatus.equalsIgnoreCase("Pending")) {
+			statusValue = "Active";
+		}else{
+			statusValue = orderObj.shippingStatus;
+		}
 
-		String status = "<b>Status </b>&nbsp;&nbsp;" + orderObj.shippingStatus;
+		String status = "<b>Status </b>&nbsp;&nbsp;" + statusValue;
 		tvOrderStatus.setText(Html.fromHtml(status));
 
 		float conversionValue = 0.0f;
@@ -303,7 +309,7 @@ public class OrderDetailActivity extends BaseActivity implements
 				selectedCurrencyCode)
 				+ orderObj.products.get(0).newPrice);
 	//	if (!orderObj.discountAmt.startsWith("0")) {
-			String discount = "<b>Discount </b> "+ orderObj.products.get(0).offpeakDiscount+"%";
+			String discount = "<b>Discount </b>&nbsp; "+ orderObj.products.get(0).offpeakDiscount+"%";
 			tvOrderDiscount.setText(Html.fromHtml(discount));
 		//} else {
 		//	tvOrderDiscount.setVisibility(View.GONE);

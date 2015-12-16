@@ -50,7 +50,7 @@ public class OrderDetailDataHandler {
 				// emailId = "pendyala.bhargavi@gmail.com";
 				param.put(Constants.PARAM_RETAILER_ID, Constants.RETAILER_ID);
 				param.put(Constants.PARAM_EMAIL, emailId);
-				param.put("retailerMail", retailerMail);
+				param.put("sellerId", emailId);
 				param.put("transactionId", transactionId);
 				JSONObject jsonObject = HTTPHandler.defaultHandler().doPost(
 						Constants.URL_VILIDATE_VOUCHER, param);
