@@ -56,6 +56,24 @@ public class Profile implements Serializable {
 	@SerializedName("orders_redeemed")
 	public String orders_redeemed;
 	
+	@SerializedName("listPrice")
+	public String listPrice;
+	
+	@SerializedName("discount")
+	public String discount;
+	
+	
+	@SerializedName("payComm")
+	public String payComm;
+	
+	@SerializedName("saleComm")
+	public String saleComm;
+	
+	@SerializedName("unitPrice")
+	public String unitPrice;
+	
+	@SerializedName("totalAmtSold")
+	public String totalAmtSold;
 
 	public Profile() {
 

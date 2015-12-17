@@ -20,7 +20,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:layout_marginBottom="43dp" >
+            android:layout_marginBottom="10dp"
+            android:layout_above="@+id/Activate" >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -267,240 +268,261 @@
                     android:layout_height="1dp"
                     android:background="@android:color/darker_gray" />
 
-                <LinearLayout
-                    android:id="@+id/llAccountListPrice"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="0dp"
-                    android:orientation="horizontal"
-                    android:weightSum="2" >
-
-                    <TextView
-                        android:id="@+id/tvMerchantListPriceText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="left|center_vertical"
-                        android:layout_weight="1"
-                        android:gravity="left"
-                        android:maxLines="1"
-                        android:text="List Price"
-                        android:textColor="@android:color/black"
-                        android:textSize="@dimen/dash_board_textsize" />
-
-                    <TextView
-                        android:id="@+id/tvMerchantListPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="right|center_vertical"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:maxLines="1"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="@dimen/dash_board_textsize" />
-                </LinearLayout>
-
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dp"
-                    android:background="@android:color/darker_gray" />
+                <Button
+                    android:id="@+id/btnShowHideInfo"
+                    android:layout_width="150dp"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/activate_qr__bg"
+                    android:text="Show Details"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/button_text_size" />
 
                 <LinearLayout
-                    android:id="@+id/llAccountDiscount"
+                    android:id="@+id/llFullinfo"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="0dp"
-                    android:orientation="horizontal"
-                    android:weightSum="2" >
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
 
-                    <TextView
-                        android:id="@+id/tvMerchantDiscountText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="left|center_vertical"
-                        android:layout_weight="1"
-                        android:gravity="left"
-                        android:maxLines="1"
-                        android:text="Discount"
-                        android:textColor="@android:color/black"
-                        android:textSize="@dimen/dash_board_textsize" />
+                    <LinearLayout
+                        android:id="@+id/llAccountListPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="0dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2" >
 
-                    <TextView
-                        android:id="@+id/tvMerchantDiscount"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="right|center_vertical"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:maxLines="1"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="@dimen/dash_board_textsize" />
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/tvMerchantListPriceText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="left|center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text="List Price"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/dash_board_textsize" />
 
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dp"
-                    android:background="@android:color/darker_gray" />
+                        <TextView
+                            android:id="@+id/tvMerchantListPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/dash_board_textsize" />
+                    </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/llAccountPaymentGateway"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="0dp"
-                    android:orientation="horizontal"
-                    android:weightSum="2" >
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
 
-                    <TextView
-                        android:id="@+id/tvMerchantPaymentGatewayText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="left|center_vertical"
-                        android:layout_weight="1"
-                        android:gravity="left"
-                        android:maxLines="1"
-                        android:text="Payment Gateway"
-                        android:textColor="@android:color/black"
-                        android:textSize="@dimen/dash_board_textsize" />
+                    <LinearLayout
+                        android:id="@+id/llAccountDiscount"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="0dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2" >
 
-                    <TextView
-                        android:id="@+id/tvMerchantPaymentGateway"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="right|center_vertical"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:maxLines="1"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="@dimen/dash_board_textsize" />
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/tvMerchantDiscountText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="left|center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text="Discount"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/dash_board_textsize" />
 
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dp"
-                    android:background="@android:color/darker_gray" />
+                        <TextView
+                            android:id="@+id/tvMerchantDiscount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/dash_board_textsize" />
+                    </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/llAccountSalesComission"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="0dp"
-                    android:orientation="horizontal"
-                    android:weightSum="2" >
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
 
-                    <TextView
-                        android:id="@+id/tvMerchantSalesComissionText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="left|center_vertical"
-                        android:layout_weight="1"
-                        android:gravity="left"
-                        android:maxLines="1"
-                        android:text="Sales Comission"
-                        android:textColor="@android:color/black"
-                        android:textSize="@dimen/dash_board_textsize" />
+                    <LinearLayout
+                        android:id="@+id/llAccountPaymentGateway"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="0dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2" >
 
-                    <TextView
-                        android:id="@+id/tvMerchantSalesComission"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="right|center_vertical"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:maxLines="1"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="@dimen/dash_board_textsize" />
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/tvMerchantPaymentGatewayText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="left|center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text="Payment Gateway"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/dash_board_textsize" />
 
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dp"
-                    android:background="@android:color/darker_gray" />
+                        <TextView
+                            android:id="@+id/tvMerchantPaymentGateway"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/dash_board_textsize" />
+                    </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/llAccountUnitNet"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="0dp"
-                    android:orientation="horizontal"
-                    android:weightSum="2" >
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
 
-                    <TextView
-                        android:id="@+id/tvMerchantUnitNetText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="left|center_vertical"
-                        android:layout_weight="1"
-                        android:gravity="left"
-                        android:maxLines="1"
-                        android:text="Unit Net Proceed"
-                        android:textColor="@android:color/black"
-                        android:textSize="@dimen/dash_board_textsize" />
+                    <LinearLayout
+                        android:id="@+id/llAccountSalesComission"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="0dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2" >
 
-                    <TextView
-                        android:id="@+id/tvMerchantUnitNet"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="right|center_vertical"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:maxLines="1"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="@dimen/dash_board_textsize" />
-                </LinearLayout>
+                        <TextView
+                            android:id="@+id/tvMerchantSalesComissionText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="left|center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text="Sales Comission"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/dash_board_textsize" />
 
-                <View
-                    android:layout_width="fill_parent"
-                    android:layout_height="1dp"
-                    android:background="@android:color/darker_gray" />
+                        <TextView
+                            android:id="@+id/tvMerchantSalesComission"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/dash_board_textsize" />
+                    </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/llAccountTotalNet"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="0dp"
-                    android:orientation="horizontal"
-                    android:weightSum="2" >
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
 
-                    <TextView
-                        android:id="@+id/tvMerchantTotalNetText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="left|center_vertical"
-                        android:layout_weight="1"
-                        android:gravity="left"
-                        android:maxLines="1"
-                        android:text="Total Net Proceed"
-                        android:textColor="@android:color/black"
-                        android:textSize="@dimen/dash_board_textsize" />
+                    <LinearLayout
+                        android:id="@+id/llAccountUnitNet"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="0dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2" >
 
-                    <TextView
-                        android:id="@+id/tvMerchantTotalNet"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_gravity="right|center_vertical"
-                        android:layout_weight="1"
-                        android:gravity="right"
-                        android:maxLines="1"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="@dimen/dash_board_textsize" />
+                        <TextView
+                            android:id="@+id/tvMerchantUnitNetText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="left|center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text="Unit Net Proceed"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/dash_board_textsize" />
+
+                        <TextView
+                            android:id="@+id/tvMerchantUnitNet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/dash_board_textsize" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/llAccountTotalNet"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="0dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2" >
+
+                        <TextView
+                            android:id="@+id/tvMerchantTotalNetText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="left|center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:text="Total Net Proceeds"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/dash_board_textsize" />
+
+                        <TextView
+                            android:id="@+id/tvMerchantTotalNet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="@dimen/dash_board_textsize" />
+                    </LinearLayout>
                 </LinearLayout>
 
                 <!--
                      <View
                     android:layout_width="fill_parent"
                     android:layout_height="1dp"
-                    android:background="@android:color/darker_gray" />
+                    android:background="@android:color/darker_gray" />
                 -->
 
                 <RelativeLayout

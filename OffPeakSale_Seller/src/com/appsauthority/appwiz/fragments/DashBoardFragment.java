@@ -40,6 +40,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -48,7 +49,7 @@ import android.widget.Toast;
 public class DashBoardFragment extends Fragment {
 
 	private View root;
-	Button ActivateQr;
+	Button ActivateQr,btnShowHideInfo;
 	private SharedPreferences spref;
 	TextView tvMerchantAccount, tvMerchantName1, tvMerchantUserIdText, tvMerchantUserId, tvMerchantText, tvMerchantName,
 			tvMerchantLocationText, tvMerchantLocation, tvMerchantStartDateText, tvMerchantStartDate,
@@ -66,6 +67,8 @@ public class DashBoardFragment extends Fragment {
 	private String mEndDate="",mStartDate="";
 	TextView vDatePicker;
 	boolean isDateselectionOk=false;
+	LinearLayout llFullinfo;
+	Boolean isDetailVisible;
 	public DashBoardFragment(SlidingMenuActivity slidingMenuActivity) {
 	}
 
@@ -87,6 +90,8 @@ public class DashBoardFragment extends Fragment {
 		rootLayout = (RelativeLayout) root.findViewById(R.id.llForm);
 
 		ActivateQr = (Button) root.findViewById(R.id.Activate);
+		btnShowHideInfo = (Button) root.findViewById(R.id.btnShowHideInfo);
+		llFullinfo = (LinearLayout) root.findViewById(R.id.llFullinfo);
 
 		tvMerchantAccount = (TextView) root.findViewById(R.id.tvMerchantAccount);
 		tvMerchantName1 = (TextView) root.findViewById(R.id.tvMerchantName1);
@@ -126,6 +131,7 @@ public class DashBoardFragment extends Fragment {
 
 		try {
 			ActivateQr.setTypeface(Helper.getSharedHelper().boldFont);
+			btnShowHideInfo.setTypeface(Helper.getSharedHelper().boldFont);
 			tvMerchantAccount.setTypeface(Helper.getSharedHelper().boldFont);
 			tvMerchantName1.setTypeface(Helper.getSharedHelper().normalFont);
 			tvMerchantUserIdText.setTypeface(Helper.getSharedHelper().boldFont);
@@ -160,6 +166,12 @@ public class DashBoardFragment extends Fragment {
 			ActivateQr.setBackgroundDrawable(
 					Helper.getSharedHelper().getGradientDrawable(Helper.getSharedHelper().reatiler.getButton_color()));
 			ActivateQr.setTextColor(Color.parseColor("#" + Helper.getSharedHelper().reatiler.getRetailerTextColor()));
+			
+			btnShowHideInfo.setBackgroundDrawable(
+					Helper.getSharedHelper().getGradientDrawable(Helper.getSharedHelper().reatiler.getButton_color()));
+			btnShowHideInfo.setTextColor(Color.parseColor("#" + Helper.getSharedHelper().reatiler.getRetailerTextColor()));
+			
+			
 
 			tvRedeemed.setTextColor(Color.parseColor("#" + Helper.getSharedHelper().reatiler.getHeaderColor()));
 			tvSold.setTextColor(Color.parseColor("#" + Helper.getSharedHelper().reatiler.getHeaderColor()));
@@ -181,6 +193,23 @@ public class DashBoardFragment extends Fragment {
 				// TODO Auto-generated method stub
 				Intent intent = new Intent(getActivity(), RedeemVoucherActivity.class);
 				startActivity(intent);
+			}
+		});
+		isDetailVisible = false;
+		btnShowHideInfo.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				if (isDetailVisible) {
+					llFullinfo.setVisibility(View.GONE);
+					isDetailVisible = false;
+					btnShowHideInfo.setText("Show Details");
+				}else{
+					llFullinfo.setVisibility(View.VISIBLE);
+					isDetailVisible = true;
+					btnShowHideInfo.setText("Hide Details");
+				}
 			}
 		});
 
@@ -279,11 +308,14 @@ public class DashBoardFragment extends Fragment {
 		tvMerchantUserId.setText(userProfile.getPhone());
 		tvMerchantName.setText(userProfile.getEmail());
 		tvMerchantLocation.setText(userProfile.getCountry());
-
-		// tvMerchantMonth.setText(userProfile.company_name);
-
-		// tvRedeemed.setText(userProfile.company_name);
-		// tvSold.setText(userProfile.company_name);
+		
+		tvMerchantListPrice.setText("$"+userProfile.listPrice);;
+		tvMerchantDiscount.setText(userProfile.discount+"%");
+		tvMerchantPaymentGateway.setText(userProfile.payComm+"%");
+		tvMerchantSalesComission.setText(userProfile.saleComm+"%");
+		tvMerchantUnitNet.setText("$"+userProfile.unitPrice);
+		tvMerchantTotalNet.setText("$"+userProfile.totalAmtSold);
+		
 		setProgress(userProfile.orders_redeemed, userProfile.orders_sold);
 	}
 

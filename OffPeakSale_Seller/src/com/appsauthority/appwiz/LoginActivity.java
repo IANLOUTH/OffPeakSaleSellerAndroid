@@ -130,14 +130,16 @@ public class LoginActivity extends BaseActivity implements UserLoginCaller,
 			}
 		});
 
+		String tvBoraderColor = "757575";
+		
 		etLoginEmailId.setBackgroundDrawable(Helper.getSharedHelper()
-				.getGradientDrawableEditText(retailer.getHeaderColor()));
+				.getGradientDrawableEditText(tvBoraderColor));
 		etLoginPWD.setBackgroundDrawable(Helper.getSharedHelper()
-				.getGradientDrawableEditText(retailer.getHeaderColor()));
+				.getGradientDrawableEditText(tvBoraderColor));
 		sp_country.setBackgroundDrawable(Helper.getSharedHelper()
-				.getGradientDrawableEditText(retailer.getHeaderColor()));
+				.getGradientDrawableEditText(tvBoraderColor));
 		etEmailForgotPwd.setBackgroundDrawable(Helper.getSharedHelper()
-				.getGradientDrawableEditText(retailer.getHeaderColor()));
+				.getGradientDrawableEditText(tvBoraderColor));
 		btnLogin.setTextColor(Color.parseColor("#"
 				+ retailer.getRetailerTextColor()));
 		btnLogin.setBackgroundDrawable(Helper.getSharedHelper()
