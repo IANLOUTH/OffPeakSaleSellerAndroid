@@ -64,6 +64,8 @@
             android:paddingLeft="10dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
+            android:singleLine="true"
+            android:maxLength="15"
             android:textSize="@dimen/edit_text_font_size"
             android:background="@drawable/button_drawable"
             android:textColor="@android:color/background_light" />

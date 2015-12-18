@@ -191,6 +191,12 @@ public class Retailer implements Serializable {
 	@SerializedName("contactPhone")
 	public String contactPhone;
 	
+	@SerializedName("contactName")
+	public String contactName;
+	
+	@SerializedName("contactInstr")
+	public String contactInstr;
+	
 	@SerializedName("button_color")
 	public String button_color;
 	
