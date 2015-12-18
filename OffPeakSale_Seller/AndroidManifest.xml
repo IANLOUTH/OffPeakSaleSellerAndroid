@@ -90,7 +90,8 @@
         <activity android:name="com.appsauthority.appwiz.ViewQRCodeActivity" />
         <activity android:name="com.appsauthority.appwiz.InvalidVoucherActivity" />
         <activity android:name="com.appsauthority.appwiz.RedeemVoucherActivity" />
-        <activity android:name="com.appsauthority.appwiz.LoginActivity"/>
+        <activity android:name="com.appsauthority.appwiz.LoginActivity"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name="com.appsauthority.appwiz.ImageZoomActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
