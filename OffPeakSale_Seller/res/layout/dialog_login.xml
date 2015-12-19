@@ -193,6 +193,7 @@
                 android:layout_weight="1"
                 android:gravity="left"
                 android:text="Forgot Password"
+                android:textColor="@color/baby_blue_color"
                 android:textSize="@dimen/button_text_size" />
 
             <TextView
@@ -203,6 +204,7 @@
                 android:layout_weight="1"
                 android:gravity="left"
                 android:text="Back to login"
+                android:textColor="@color/baby_blue_color"
                 android:textSize="@dimen/button_text_size"
                 android:visibility="gone" />
 
@@ -214,6 +216,7 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="Need help"
+                android:textColor="@color/baby_blue_color"
                 android:textSize="@dimen/button_text_size" />
         </LinearLayout>
     </LinearLayout>

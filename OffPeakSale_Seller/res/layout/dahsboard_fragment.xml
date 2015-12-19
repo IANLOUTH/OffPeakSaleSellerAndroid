@@ -27,7 +27,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/left_right_margin"
-                android:orientation="vertical" >
+                android:orientation="vertical" 
+                android:layout_marginBottom="5dp">
 
                 <LinearLayout
                     android:id="@+id/llAccount"
@@ -59,7 +60,7 @@
                         android:gravity="right"
                         android:maxLines="1"
                         android:text="KFC"
-                        android:textColor="@android:color/darker_gray"
+                        android:textColor="@android:color/black"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -99,7 +100,7 @@
                         android:gravity="right"
                         android:maxLines="1"
                         android:text="1761657"
-                        android:textColor="@android:color/darker_gray"
+                        android:textColor="@android:color/black"
                         android:textSize="14sp" />
                 </LinearLayout>
 
@@ -139,7 +140,7 @@
                         android:gravity="right"
                         android:maxLines="1"
                         android:text="kfc@gmail.com"
-                        android:textColor="@android:color/darker_gray"
+                        android:textColor="@android:color/black"
                         android:textSize="@dimen/dash_board_textsize" />
                 </LinearLayout>
 
@@ -179,7 +180,7 @@
                         android:gravity="right"
                         android:maxLines="1"
                         android:text="Singapore"
-                        android:textColor="@android:color/darker_gray"
+                        android:textColor="@android:color/black"
                         android:textSize="@dimen/dash_board_textsize" />
                 </LinearLayout>
 
@@ -219,7 +220,7 @@
                         android:gravity="right"
                         android:maxLines="1"
                         android:text="Select Start Date"
-                        android:textColor="@android:color/darker_gray"
+                        android:textColor="@android:color/black"
                         android:textSize="@dimen/dash_board_textsize" />
                 </LinearLayout>
 
@@ -318,7 +319,7 @@
                             android:layout_weight="1"
                             android:gravity="right"
                             android:maxLines="1"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@android:color/black"
                             android:textSize="@dimen/dash_board_textsize" />
                     </LinearLayout>
 
@@ -357,7 +358,7 @@
                             android:layout_weight="1"
                             android:gravity="right"
                             android:maxLines="1"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@android:color/black"
                             android:textSize="@dimen/dash_board_textsize" />
                     </LinearLayout>
 
@@ -396,7 +397,7 @@
                             android:layout_weight="1"
                             android:gravity="right"
                             android:maxLines="1"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@android:color/black"
                             android:textSize="@dimen/dash_board_textsize" />
                     </LinearLayout>
 
@@ -435,7 +436,7 @@
                             android:layout_weight="1"
                             android:gravity="right"
                             android:maxLines="1"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@android:color/black"
                             android:textSize="@dimen/dash_board_textsize" />
                     </LinearLayout>
 
@@ -474,7 +475,7 @@
                             android:layout_weight="1"
                             android:gravity="right"
                             android:maxLines="1"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@android:color/black"
                             android:textSize="@dimen/dash_board_textsize" />
                     </LinearLayout>
 
@@ -513,7 +514,7 @@
                             android:layout_weight="1"
                             android:gravity="right"
                             android:maxLines="1"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@android:color/black"
                             android:textSize="@dimen/dash_board_textsize" />
                     </LinearLayout>
                 </LinearLayout>
@@ -533,7 +534,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:orientation="horizontal" >
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp" >
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -548,7 +550,7 @@
                                 android:gravity="center"
                                 android:maxLines="1"
                                 android:text="50"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/unit_value_textsize" />
 
                             <TextView
@@ -570,7 +572,7 @@
                                 android:gravity="center"
                                 android:maxLines="1"
                                 android:text="200"
-                                android:textColor="@android:color/darker_gray"
+                                android:textColor="@android:color/black"
                                 android:textSize="@dimen/unit_value_textsize" />
 
                             <TextView
@@ -627,7 +629,7 @@
                                     android:layout_toRightOf="@+id/tvProgressTextField"
                                     android:gravity="center"
                                     android:maxLines="1"
-                                    android:minWidth="20dp"
+                                    android:minWidth="25dp"
                                     android:paddingBottom="20dp"
                                     android:text="%"
                                     android:textColor="@android:color/black"

@@ -59,7 +59,8 @@ public class LoginActivity extends BaseActivity implements UserLoginCaller,
 	private ArrayList<Country> countryList = new ArrayList<Country>();
 	private ArrayList<String> countryNameList = new ArrayList<String>();
 	private ArrayList<String> countrySearchList = new ArrayList<String>();
-	public static boolean isNeeHelpClicked=false;
+	public static boolean isNeeHelpClicked = false;
+
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		getActionBar().hide();
@@ -110,10 +111,10 @@ public class LoginActivity extends BaseActivity implements UserLoginCaller,
 
 			@Override
 			public void onClick(View arg0) {
-				isNeeHelpClicked=true;
+				isNeeHelpClicked = true;
 				Intent intent = new Intent(LoginActivity.this,
 						SlidingMenuActivity.class);
-				//intent.putExtra("terms_of_use_link", retailer.aboutUrl);
+				// intent.putExtra("terms_of_use_link", retailer.aboutUrl);
 				startActivity(intent);
 			}
 		});
@@ -131,7 +132,7 @@ public class LoginActivity extends BaseActivity implements UserLoginCaller,
 		});
 
 		String tvBoraderColor = "757575";
-		
+
 		etLoginEmailId.setBackgroundDrawable(Helper.getSharedHelper()
 				.getGradientDrawableEditText(tvBoraderColor));
 		etLoginPWD.setBackgroundDrawable(Helper.getSharedHelper()
@@ -171,7 +172,9 @@ public class LoginActivity extends BaseActivity implements UserLoginCaller,
 				String password = etLoginPWD.getText().toString();
 				String country = sp_country.getText().toString();
 				String errorMsg = null;
-				if (!Helper.getSharedHelper().isEmailValid(emailid)) {
+				if (emailid.length() == 0) {
+					errorMsg = "Please enter your email id";
+				} else if (!Helper.getSharedHelper().isEmailValid(emailid)) {
 					errorMsg = "Invalid email id";
 				} else if (password == null || password.length() == 0) {
 					errorMsg = "Enter password";
@@ -196,7 +199,9 @@ public class LoginActivity extends BaseActivity implements UserLoginCaller,
 			public void onClick(View arg0) {
 				String emailid = etEmailForgotPwd.getText().toString();
 				String errorMsg = null;
-				if (!Helper.getSharedHelper().isEmailValid(emailid)) {
+				if (emailid.length() == 0) {
+					errorMsg = "Please enter your email id";
+				} else if (!Helper.getSharedHelper().isEmailValid(emailid)) {
 					errorMsg = "Invalid email id";
 				}
 				if (errorMsg != null) {
