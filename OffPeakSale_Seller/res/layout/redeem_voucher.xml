@@ -50,7 +50,7 @@
             android:layout_marginTop="60dp"
             android:gravity="center"
             android:maxLines="1"
-            android:text="Enter Voucher Code"
+            android:text="Enter Order Number"
             android:textColor="@color/triangle_underline_color"
             android:textSize="12sp"
             android:layout_marginBottom="3dp"

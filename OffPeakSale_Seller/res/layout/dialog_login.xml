@@ -115,10 +115,11 @@
                     <Button
                         android:id="@+id/btnLogin"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/button_height"
+                        android:layout_height="@dimen/login_button_height"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
-                        android:padding="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
                         android:text="Login"
                         android:textSize="@dimen/button_text_size"
                         android:textStyle="bold" />
@@ -159,11 +160,12 @@
                     <Button
                         android:id="@+id/btnForgotPwd"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/button_height"
+                        android:layout_height="@dimen/login_button_height"
                         android:layout_marginBottom="10dp"
                         android:layout_marginTop="10dp"
                         android:gravity="center"
-                        android:padding="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
                         android:text="Send Email"
                         android:textSize="@dimen/button_text_size"
                         android:textStyle="bold" />
