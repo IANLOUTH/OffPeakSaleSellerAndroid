@@ -55,7 +55,7 @@ public class OrderDetailActivity extends BaseActivity implements
 		btnRedeem = (Button) findViewById(R.id.btnRedeem);
 		// tvQRCode.setText(orderObj.qrCode);
 
-		textViewHeader.setText("Valid Voucher");
+		textViewHeader.setText("Valid Order");
 		// itemListView = (ListView) findViewById(R.id.lv_items);
 		// adapter = new OrderDetailAdapter(this, R.layout.row_order_item,
 		// orderObj.products);

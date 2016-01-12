@@ -33,7 +33,7 @@ public class InvalidVoucherActivity extends BaseActivity {
 		ImageView back = (ImageView) findViewById(R.id.imageViewOverflow);
 		TextView header = (TextView) findViewById(R.id.textViewHeader);
 		back.setBackgroundResource(R.drawable.backbutton);
-		header.setText("Invalid Voucher");
+		header.setText("Invalid Order");
 		TextView voucherStatus = (TextView) findViewById(R.id.voucherStatus);
 		TextView voucherStatusDate = (TextView) findViewById(R.id.voucherStatusDate);
 		Button btnOk = (Button) findViewById(R.id.btnOk);
@@ -51,10 +51,10 @@ public class InvalidVoucherActivity extends BaseActivity {
 		}
 		
 		if (isValid) {
-			header.setText("Voucher Redeemed");
+			header.setText("Order Redeemed");
 			imgMSG.setImageDrawable(getResources().getDrawable(R.drawable.smily_happy));
 		} else {
-			header.setText("Invalid Voucher");
+			header.setText("Invalid Order");
 			imgMSG.setImageDrawable(getResources().getDrawable(R.drawable.smiley_icon));
 			
 		}

@@ -46,7 +46,7 @@ public class RedeemVoucherActivity extends BaseActivity implements
 		btnScan = (Button) findViewById(R.id.btnScan);
 		btnValidate = (Button) findViewById(R.id.btnValidate);
 		etVoucherCode = (EditText) findViewById(R.id.etVoucherCode);
-		textViewHeader.setText("Redeem Voucher");
+		textViewHeader.setText("Redeem Order");
 
 		try {
 			v.setBackgroundColor(Color.parseColor("#"
