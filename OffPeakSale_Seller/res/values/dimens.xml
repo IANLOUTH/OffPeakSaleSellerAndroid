@@ -50,5 +50,6 @@
     <dimen name="vaoucher_msg_textsize">25sp</dimen>
     <dimen name="vaoucher_date_textsize">14sp</dimen>
     <dimen name="dash_board_textsize">14sp</dimen>
+    <dimen name="order_detail_item_gap">5dp</dimen>
 
 </resources>

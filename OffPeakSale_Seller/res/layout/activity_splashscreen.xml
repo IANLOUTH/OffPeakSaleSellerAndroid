@@ -26,6 +26,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
             android:text="Powered by:"
+            android:visibility="gone"
             android:textSize="@dimen/footer_textsize" />
 
         <TextView
@@ -35,6 +36,7 @@
             android:layout_marginTop="8dp"
             android:padding="6dp"
             android:textColor="#000084"
+            android:visibility="gone"
             android:textSize="@dimen/footer_textsize" />
     </LinearLayout>
 
