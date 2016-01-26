@@ -195,8 +195,8 @@
                 android:layout_weight="1"
                 android:gravity="left"
                 android:text="Forgot Password"
-                android:textColor="@color/baby_blue_color"
-                android:textSize="@dimen/button_text_size" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/login_button_textsize" />
 
             <TextView
                 android:id="@+id/tvShowLogin"
@@ -206,8 +206,8 @@
                 android:layout_weight="1"
                 android:gravity="left"
                 android:text="Back to login"
-                android:textColor="@color/baby_blue_color"
-                android:textSize="@dimen/button_text_size"
+                android:textColor="@color/black"
+                android:textSize="@dimen/login_button_textsize"
                 android:visibility="gone" />
 
             <TextView
@@ -218,8 +218,8 @@
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="Need help"
-                android:textColor="@color/baby_blue_color"
-                android:textSize="@dimen/button_text_size" />
+                android:textColor="@color/black"
+                android:textSize="@dimen/login_button_textsize" />
         </LinearLayout>
     </LinearLayout>
 

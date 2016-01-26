@@ -51,5 +51,6 @@
     <dimen name="vaoucher_date_textsize">14sp</dimen>
     <dimen name="dash_board_textsize">14sp</dimen>
     <dimen name="order_detail_item_gap">5dp</dimen>
+    <dimen name="login_button_textsize">15sp</dimen>
 
 </resources>
